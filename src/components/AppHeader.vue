@@ -16,7 +16,7 @@ export default {
     <!-- container -->
     <div class="container text-white">
         <!-- upper header -->
-        <div class="d-flex ms-bg-light-purple justify-content-between py-2">
+        <div class="d-flex ms-bg-purple justify-content-between py-2">
             <!-- left-upper header -->
             <div class="d-flex">
                 <!-- socials -->
@@ -87,10 +87,11 @@ export default {
 
             <!-- search/cart -->
             <ul class="ms-search-cart w-25 m-0 list-unstyled gap-3 pe-3">
-                <li class="ms-icon bg-white rounded-circle ms-color-light-purple">
+                <li class="ms-icon bg-white rounded-circle ms-color-purple">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </li>
-                <li class="ms-icon bg-white rounded-circle ms-color-light-purple">
+                <li class="ms-icon bg-white rounded-circle ms-color-purple position-relative">
+                    <div class="ms-sm-icon position-absolute top-0 start-100 translate-middle ms-bg-light-purple text-white rounded-circle">0</div>
                     <i class="fa-solid fa-cart-shopping"></i>
                 </li>
             </ul>
@@ -105,8 +106,14 @@ export default {
     .ms-bg-light-purple{
         background-color: $light-purple;
     }
-    .ms-color-light-purple{
+    .ms-color-purple{
         color: $light-purple;
+    }
+    .ms-bg-purple{
+        background-color: $purple;
+    }
+    .ms-color-purple{
+        color: $purple;
     }
     .ms-bg-dark-purple{
         background-color: $dark-purple;
@@ -121,9 +128,13 @@ export default {
     .ms-icon{
         width: 40px;
         height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    }
+    .ms-sm-icon{
+        width: 25px;
+        height: 25px;
+    }
+    .ms-icon, .ms-sm-icon{
+        @include flex(row, center, center)
     }
 
     .ms-socials, 
