@@ -22,19 +22,19 @@ export default {
                 <!-- socials -->
                 <div class="ms-socials gap-3 px-3 border-end">
                     <!-- facebook icon -->
-                    <span class="ms-social ms-bg-dark-purple rounded-circle">
+                    <span class="ms-social ms-icon ms-bg-dark-purple rounded-circle">
                         <i class="fa-brands fa-facebook"></i>
                     </span>
                     <!-- twitter icon -->
-                    <span class="ms-social ms-bg-dark-purple rounded-circle">
+                    <span class="ms-social ms-icon ms-bg-dark-purple rounded-circle">
                         <i class="fa-brands fa-twitter"></i>
                     </span>
                     <!-- linkedin icon -->
-                    <span class="ms-social ms-bg-dark-purple rounded-circle">
+                    <span class="ms-social ms-icon ms-bg-dark-purple rounded-circle">
                         <i class="fa-brands fa-linkedin"></i>
                     </span>
                     <!-- instagram icon -->
-                    <span class="ms-social ms-bg-dark-purple rounded-circle">
+                    <span class="ms-social ms-icon ms-bg-dark-purple rounded-circle">
                         <i class="fa-brands fa-instagram"></i>
                     </span>
                 </div>
@@ -55,12 +55,13 @@ export default {
                 <!-- brief -->
                 <div class="ms-brief me-3">
                     <span>
-                        this is <a href="#" class="text-success">RaxG.</a> A template for games, clans & esports
+                        this is <a href="#" class="text-success text-decoration-none">RaxG.</a> A template for games,
+                        clans & esports
                     </span>
                 </div>
                 <!-- live streaming -->
                 <div class="ms-streaming px-3 border-start">
-                    <a href="#" class="bg-success ms-color-dark-purple px-3 py-2 rounded">
+                    <a href="#" class="ms-bg-light-green ms-color-dark-purple px-3 py-2 rounded text-decoration-none">
                         <i class="fa-solid fa-message"></i>
                         Live streaming
                     </a>
@@ -69,25 +70,30 @@ export default {
         </div>
         <!-- lower header -->
         <header class="ms-bg-dark-purple d-flex">
-            <div>
+            <!-- logo -->
+            <div class="ms-logo w-25">
                 <img src="../assets/img/menulogo.png" alt="">
             </div>
-            <ul>
+
+            <!-- navbar -->
+            <ul class="ms-navbar w-50 m-0 list-unstyled gap-3">
                 <li v-for="item in store.menu" :key="item">
-                    <router-link :to="{ name: item.routeName }" class="text-white">
+                    <router-link :to="{ name: item.routeName }" class="text-white text-decoration-none">
                         {{ item.title }}
                         <i class="fa-solid fa-chevron-down"></i>
                     </router-link>
                 </li>
             </ul>
-            <div>
-                <span>
+
+            <!-- search/cart -->
+            <ul class="ms-search-cart w-25 m-0 list-unstyled gap-3 pe-3">
+                <li class="ms-icon bg-white rounded-circle ms-color-light-purple">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                </span>
-                <span>
+                </li>
+                <li class="ms-icon bg-white rounded-circle ms-color-light-purple">
                     <i class="fa-solid fa-cart-shopping"></i>
-                </span>
-            </div>
+                </li>
+            </ul>
         </header>
     </div>
 </template>
@@ -99,14 +105,20 @@ export default {
     .ms-bg-light-purple{
         background-color: $light-purple;
     }
+    .ms-color-light-purple{
+        color: $light-purple;
+    }
     .ms-bg-dark-purple{
         background-color: $dark-purple;
     }
     .ms-color-dark-purple{
-        color: $light-purple;
+        color: $dark-purple;
+    }
+    .ms-bg-light-green{
+        background-color: $light-green;
     }
 
-    .ms-social{
+    .ms-icon{
         width: 40px;
         height: 40px;
         display: flex;
@@ -114,8 +126,20 @@ export default {
         align-items: center;
     }
 
-    .ms-socials, .ms-assistance, .ms-brief, .ms-streaming{
+    .ms-socials, 
+    .ms-assistance, 
+    .ms-brief, 
+    .ms-streaming,
+    .ms-logo,
+    .ms-navbar,
+    .ms-search-cart
+    {
         @include flex(row, center, center)
+    }
+
+    .ms-search-cart
+    {
+        justify-content: end;
     }
 
 </style>
