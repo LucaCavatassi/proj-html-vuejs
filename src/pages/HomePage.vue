@@ -1,15 +1,21 @@
 <script>
-export default {
+import HeroBgSlider from "/src/components/HeroBgSlider.vue"
 
+export default {
+    components: {
+        HeroBgSlider, 
+    },
+    data (){
+        return{
+        }
+    },
 }
 </script>
 
 <template>
-    <div>
-        <h1>home</h1>
-    </div>
+    <HeroBgSlider />
 </template>
 
-<style lang="">
-
+<style scoped lang="scss">
+    
 </style>
