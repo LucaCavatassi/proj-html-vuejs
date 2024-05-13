@@ -66,14 +66,27 @@ export default {
                 </div>
             </div>
         </div>
+        <!-- lower header -->
         <header class="bg-secondary">
+            <div>
+                <img src="../assets/img/menulogo.png" alt="">
+            </div>
             <ul>
                 <li v-for="item in store.menu" :key="item">
                     <router-link :to="{ name: item.routeName }" class="text-white">
                         {{ item.title }}
+                        <i class="fa-solid fa-chevron-down"></i>
                     </router-link>
                 </li>
             </ul>
+            <div>
+                <span>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <span>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+            </div>
         </header>
     </div>
 </template>
