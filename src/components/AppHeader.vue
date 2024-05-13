@@ -12,11 +12,64 @@ export default {
 </script>
 
 <template>
-    <div>
-        <header>
+    <!-- container -->
+    <div class="container">
+        <!-- upper header -->
+        <div>
+            <!-- left-upper header -->
+            <div>
+                <!-- socials -->
+                <div>
+                    <!-- facebook icon -->
+                    <span>
+                        <i class="fa-brands fa-facebook"></i>
+                    </span>
+                    <!-- twitter icon -->
+                    <span>
+                        <i class="fa-brands fa-twitter"></i>
+                    </span>
+                    <!-- linkedin icon -->
+                    <span>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </span>
+                    <!-- instagram icon -->
+                    <span>
+                        <i class="fa-brands fa-instagram"></i>
+                    </span>
+                </div>
+                <!-- assistance phone number -->
+                <div>
+                    <!-- headphones icon -->
+                    <span class="text-success">
+                        <i class="fa-solid fa-headphones-simple"></i>
+                    </span>
+                    <!-- phone number -->
+                    <span>
+                        +880 222 333 2580
+                    </span>
+                </div>
+            </div>
+            <!-- right-upper header -->
+            <div>
+                <!-- brief -->
+                <div>
+                    <span>
+                        this is <a href="#">RaxG</a>. A template for games, clans & esports
+                    </span>
+                </div>
+                <!-- live streaming -->
+                <div>
+                    <a href="#">
+                        <i class="fa-solid fa-message"></i>
+                        Live streaming
+                    </a>
+                </div>
+            </div>
+        </div>
+        <header class="bg-secondary">
             <ul>
                 <li v-for="item in store.menu" :key="item">
-                    <router-link :to="{ name: item.routeName }">
+                    <router-link :to="{ name: item.routeName }" class="text-white">
                         {{ item.title }}
                     </router-link>
                 </li>
