@@ -6,7 +6,7 @@ export default {
 
 <template>
     <div>
-
+        <h1>home</h1>
     </div>
 </template>
 

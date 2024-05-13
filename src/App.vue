@@ -1,12 +1,20 @@
 <script>
-export default {
+import AppHeader from './components/AppHeader.vue';
 
+export default {
+  components:{
+    AppHeader,
+  },
+  data() {
+    return {
+    }
+  },
 }
 </script>
 
 <template>
   <div>
-    <h1>Ciao</h1>
+    <AppHeader />
     <router-view></router-view>
   </div>
 </template>
