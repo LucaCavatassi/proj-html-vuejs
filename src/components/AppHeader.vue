@@ -7,7 +7,20 @@ export default {
     data() {
         return {
             store,
+            isFixed: false
         }
+    },
+    mounted() {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    methods: {
+        handleScroll() {
+            const scrollTop = window.scrollY;
+            this.isFixed = scrollTop > 160;
+        }
+    },
+    beforeDestroy() {
+        window.removeEventListener('scroll', this.handleScroll);
     },
 }
 </script>
@@ -69,7 +82,8 @@ export default {
             </div>
         </div>
         <!-- lower header -->
-        <header class="ms-bg-dark-purple d-flex">
+        <header class="ms-bg-dark-purple d-flex" :class="{ 'fixed-top': isFixed }"
+            :style="{ width: isFixed ? '1296px' : '', margin: isFixed? 'auto': '' }">
             <!-- logo -->
             <div class="ms-logo w-25">
                 <img src="../assets/img/menulogo.png" alt="">
@@ -91,7 +105,9 @@ export default {
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </li>
                 <li class="ms-icon bg-white rounded-circle ms-color-purple position-relative">
-                    <div class="ms-sm-icon position-absolute top-0 start-100 translate-middle ms-bg-light-purple text-white rounded-circle">0</div>
+                    <div
+                        class="ms-sm-icon position-absolute top-0 start-100 translate-middle ms-bg-light-purple text-white rounded-circle">
+                        0</div>
                     <i class="fa-solid fa-cart-shopping"></i>
                 </li>
             </ul>
@@ -151,6 +167,10 @@ export default {
     .ms-search-cart
     {
         justify-content: end;
+    }
+
+    .fixed{
+        position: fixed;
     }
 
 </style>
