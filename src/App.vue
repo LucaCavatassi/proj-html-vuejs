@@ -1,4 +1,6 @@
 <script>
+import { store } from './store';
+
 import AppFooter from './components/AppFooter.vue';
 import AppHeader from './components/AppHeader.vue';
 
@@ -9,6 +11,7 @@ export default {
   },
   data() {
     return {
+      store,
     }
   },
 }
@@ -18,9 +21,9 @@ export default {
   <div>
     <AppHeader />
     <router-view></router-view>
-    <AppFooter />
+
+    <AppFooter :storeObj="store" />
   </div>
 </template>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>
