@@ -1,9 +1,11 @@
-<script>
+<script> 
+import HeroBgSlider from "./HeroBgSlider.vue"
 import PlayButton from "./PlayButton.vue"
 
 export default {
     components: {
-        PlayButton
+        PlayButton,
+        HeroBgSlider
     },
 
     data(){
@@ -27,6 +29,7 @@ export default {
 
 <template>
     <!-- OVERLAY-HERO -->
+    <HeroBgSlider class="slider" />
     <div class="container">
         <div class="row overlay h-100 w-50">
             <div class="col ms_margin h-100 d-flex flex-column justify-content-center">
@@ -63,10 +66,14 @@ export default {
 <style scoped lang="scss">
 @use "../style/partials/variables" as *;
 
-.overlay {
-    position: absolute; 
-    z-index: 9990;
 
+.slider {
+    position: absolute;
+    z-index: -1;
+}
+
+.container {
+    height: 100vh;
     .ms_margin{
         padding-top: 100px;
     }

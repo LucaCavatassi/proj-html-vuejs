@@ -1,10 +1,5 @@
 <script>
-import HeroOverlay from "/src/components/HeroOverlay.vue"
-
 export default {
-    components: {
-        HeroOverlay,
-    },
 
     data() {
         return {
@@ -22,12 +17,9 @@ export default {
 </script>
 
 <template>
-    <HeroOverlay />
     <div class="container-fluid px-0">
         <div class="row">
             <div class="col px-0">
-                <!-- OVERLAY-HERO -->
-                <!-- /OVERLAY-HERO -->
 
                 <div class="position-absolute z-1 d-flex w-100 h-100 justify-content-end align-items-center pt-5">
                     <img class="ms_img img-fluid rounded-5" :src="getPic(img)" alt="">
@@ -54,6 +46,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
+
 .carousel-inner {
     position: relative;
 

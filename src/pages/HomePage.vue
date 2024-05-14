@@ -1,9 +1,9 @@
 <script>
-import HeroBgSlider from "/src/components/HeroBgSlider.vue"
+import HeroOverlay from "/src/components/HeroOverlay.vue"
 
 export default {
     components: {
-        HeroBgSlider, 
+        HeroOverlay, 
     },
     data (){
         return{
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-    <HeroBgSlider />
+    <HeroOverlay />
 </template>
 
 <style scoped lang="scss">
