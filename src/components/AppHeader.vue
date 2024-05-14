@@ -1,5 +1,7 @@
 <script>
 import {router} from '../router.js';
+import { store } from '../store.js';
+
 
 
 export default {
@@ -8,11 +10,7 @@ export default {
     },
     data() {
         return {
-<<<<<<< HEAD
             store,
-=======
-            
->>>>>>> 6b7eb3dbe474abf1c70d8a0c52c023a72021854e
             isFixed: false
         }
     },
@@ -23,11 +21,7 @@ export default {
         handleScroll() {
             const scrollTop = window.scrollY;
             this.isFixed = scrollTop > 160;
-<<<<<<< HEAD
         }
-=======
-        },
->>>>>>> 6b7eb3dbe474abf1c70d8a0c52c023a72021854e
     },
     beforeDestroy() {
         window.removeEventListener('scroll', this.handleScroll);
