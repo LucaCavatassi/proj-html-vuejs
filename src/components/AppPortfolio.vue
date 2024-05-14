@@ -59,8 +59,7 @@ export default {
             <div class="row gap-4 mt-5 justify-content-center">
                 <div class="col" v-for="pers in person" :key="pers">
                     <div class="card">
-                        <img :src="`http://localhost:5173/src/assets/img/${pers.imgUrl}.png`" class="img-fluid"
-                            :alt="element">
+                        <img :src="`http://localhost:5173/src/assets/img/${pers.imgUrl}.png`" class="img-fluid" :alt="element">
                         <div class="card-body">
                             <h2 class="card-title">{{ pers.name }}</h2>
                             <p class="card-text">{{ pers.role }}</p>
