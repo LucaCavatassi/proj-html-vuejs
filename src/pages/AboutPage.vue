@@ -1,15 +1,23 @@
 <script>
-export default {
+import AppHero from '../components/AppHero.vue'
 
+export default {
+    components:{
+        AppHero,
+    },
+    data() {
+        return {
+            
+        }
+    },
 }
 </script>
 
 <template>
     <div>
-        <h1>about</h1>
+        <AppHero />
     </div>
 </template>
 
-<style lang="">
-    
+<style lang="scss" scoped>
 </style>
