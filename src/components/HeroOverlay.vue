@@ -1,18 +1,16 @@
 <script>
+import PlayerButton from "./PlayerButton.vue";
 
 export default {
-    data(){
-        return{
-            isOpen: false
-        }
+    components: {
+        PlayerButton
     },
 
-    methods:{
-        openModal() {
-            this.isOpen = !this.isOpen
-            console.log(this.isOpen);
+    data(){
+        return{
+            
         }
-    }
+    },
 }
 </script>
 
@@ -22,6 +20,8 @@ export default {
         <div class="row overlay h-100 w-50">
             <div class="col ms_margin h-100 d-flex flex-column justify-content-center">
                 <h5 class="ms-green">WELCOME TO RAGX</h5>
+
+                <!-- TEXT CAROUSEL -->
                 <div id="bg_carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -35,18 +35,14 @@ export default {
                         </div>
                     </div>
                 </div>
-                
+                <!-- /TEXT CAROUSEL -->
+
+                <!-- BUTTONS -->
                 <div class="d-flex gap-4 align-items-center">
                     <button class="btn p-2 py-3 fs-5">Read More &RightArrow; </button>
-                    <button @click="openModal" class="btn ms-btn rounded-circle"><i class="fa-solid fa-play"></i></button>
-                    
-                    <div v-if="isOpen">
-                        <div class="ms-modal">
-                            <h1>ciao</h1>
-                        </div>
-                    </div>
+                    <PlayerButton/>
                 </div>  
-
+                <!-- /BUTTONS -->
             </div>
         </div>
     </div>
@@ -59,34 +55,33 @@ export default {
 .overlay {
     position: absolute; 
     z-index: 999;
+
     .ms_margin{
         padding-top: 100px;
     }
+
     .ms-green{
         color: $green
     }
+
     .my-hero-fs{
         font-size: 5rem;
     }
+
     .btn {
         background-color: $light-green;
         font-weight: bold;
         width: 30%;
     }
+
     .btn:hover {
     background: transparent;
     border: 1px solid $light-green;
     color: $light-green;
-    }
-    .ms-btn {
-        height: 80px;
-        width: 80px;
     }
 
     .carousel-fade .active.carousel-item-start, .carousel-fade .active.carousel-item-end {
         transition: opacity .8s 0s;
     }
 }
-
-
 </style>
