@@ -22,14 +22,14 @@ export default {
 </script>
 
 <template>
+    <HeroOverlay />
     <div class="container-fluid px-0">
         <div class="row">
             <div class="col px-0">
                 <!-- OVERLAY-HERO -->
-                <HeroOverlay />
                 <!-- /OVERLAY-HERO -->
 
-                <div class="position-absolute z-3 d-flex w-100 h-100 justify-content-end align-items-center pt-5">
+                <div class="position-absolute z-1 d-flex w-100 h-100 justify-content-end align-items-center pt-5">
                     <img class="ms_img img-fluid rounded-5" :src="getPic(img)" alt="">
                 </div>
 

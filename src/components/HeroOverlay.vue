@@ -1,16 +1,27 @@
 <script>
-import PlayerButton from "./PlayerButton.vue";
+import PlayButton from "./PlayButton.vue"
 
 export default {
     components: {
-        PlayerButton
+        PlayButton
     },
 
     data(){
         return{
-            
+            videoUrl: ""
         }
     },
+
+    methods: {
+
+        urlOnClick () {
+            this.videoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ?si=pnVeLrpkhMhRVFnX"
+        },
+
+        stopOnClick () {
+            this.videoUrl = ""
+        }
+    }
 }
 </script>
 
@@ -40,7 +51,7 @@ export default {
                 <!-- BUTTONS -->
                 <div class="d-flex gap-4 align-items-center">
                     <button class="btn p-2 py-3 fs-5">Read More &RightArrow; </button>
-                    <PlayerButton/>
+                    <PlayButton />
                 </div>  
                 <!-- /BUTTONS -->
             </div>
@@ -54,7 +65,7 @@ export default {
 
 .overlay {
     position: absolute; 
-    z-index: 999;
+    z-index: 9990;
 
     .ms_margin{
         padding-top: 100px;
@@ -82,6 +93,16 @@ export default {
 
     .carousel-fade .active.carousel-item-start, .carousel-fade .active.carousel-item-end {
         transition: opacity .8s 0s;
+    }
+
+    .ms-btn {
+        height: 80px;
+        width: 80px;
+    }
+    
+    .modal {
+    --bs-modal-width: 600px;
+    --bs-modal-bg: black;
     }
 }
 </style>
