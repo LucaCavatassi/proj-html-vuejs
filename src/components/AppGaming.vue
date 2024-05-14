@@ -43,31 +43,34 @@ export default {
         <div class="container">
 
             <!-- inner container left -->
-            <div class="w-50">
-                <img src="../assets/img/newsleft.png" alt="">
+            <div class="w-50 position-relative thumb rounded-4 text-white">
                 <!-- client -->
-                <div>
-                    <!-- client img -->
-                    <div>
-                        <img :src="`http://localhost:5173/src/assets/img/${clients[0].imgUrl}.png`" class="img-fluid"
-                            :alt="clients[0].name">
+                <div class="position-absolute left-0 bottom-0 p-3 h-50">
+                    <div class="d-flex align-items-center">
+                        <!-- client img -->
+                        <div class="img-user me-2">
+                            <img :src="`http://localhost:5173/src/assets/img/${clients[0].imgUrl}.png`"
+                                class="img-fluid" :alt="clients[0].name">
+                        </div>
+                        <section>
+                            <!-- name -->
+                            <h6 class="m-0">{{ this.clients[0].name }}</h6>
+                            <p class="m-0">{{ this.clients[0].description }}</p>
+                        </section>
                     </div>
+                    <!-- news -->
                     <section>
-                        <!-- name -->
-                        <h6>{{ this.clients[0].name }}</h6>
-                        <p>{{ this.clients[0].description }}</p>
+                        <h2 class="fw-bold mb-4">Assassain Creed 5 Most Amazing Fact That You Never Known
+                            Before.
+                        </h2>
+                        <p>
+                            Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum ante sum
+                            primis in
+                            faucibus orci luctus amet nisl tempus et ultrices posuere cubilia Curae....
+                        </p>
+                        <button class="btn py-3 px-2">Read More &RightArrow; </button>
                     </section>
                 </div>
-                <!-- news -->
-                <section>
-                    <h2 class="fw-semibold fs-50 mb-4">Assassain Creed 5 Most Amazing Fact That You Never Known Before.
-                    </h2>
-                    <p>
-                        Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum ante sum primis in
-                        faucibus orci luctus amet nisl tempus et ultrices posuere cubilia Curae....
-                    </p>
-                    <button class="btn p-2 py-3 fs-5">Read More &RightArrow; </button>
-                </section>
             </div>
 
             <!-- inner container right -->
@@ -117,5 +120,17 @@ export default {
     background: transparent;
     border: 1px solid $light-green;
     color: $light-green;
+}
+
+.thumb{
+    height: 760px;
+    background-image: url("../assets/img/newsleft.png");
+    background-image: cover;
+    background-position: center;
+}
+
+.img-user{
+    width: 60px;
+    height: 60px;
 }
 </style>
