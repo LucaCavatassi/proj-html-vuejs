@@ -14,15 +14,11 @@ export default {
             store,
         }
     },
-    mounted(){
-        console.log("funziona: ", this.store.menu[this.store.activeIndex].title);
-    }
 }
 </script>
 
 <template>
     <div>
-        <h1>{{ this.store.menu[this.activeIndex] }}</h1>
         <AppHero :page="store"/>
     </div>
 </template>
