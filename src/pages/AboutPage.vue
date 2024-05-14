@@ -2,6 +2,7 @@
 import AppAboutSection from '../components/AppAboutSection.vue';
 import AppHero from '../components/AppHero.vue';
 import AppPortfolioSection from '../components/AppPortfolioSection.vue';
+import AppTestimonials from '../components/AppTestimonials.vue';
 import { store } from "../store";
 
 export default {
@@ -12,6 +13,7 @@ export default {
         AppHero,
         AppAboutSection,
         AppPortfolioSection,
+        AppTestimonials,
     },
     data() {
         return {
@@ -26,6 +28,7 @@ export default {
         <AppHero :page="store"/>
         <AppAboutSection />
         <AppPortfolioSection/>
+        <AppTestimonials/>
     </div>
 </template>
 
