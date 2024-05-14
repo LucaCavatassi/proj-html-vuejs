@@ -1,12 +1,18 @@
 <script>
-import { store } from '../store';
 import {router} from '../router.js';
 
 
 export default {
+    props:{
+        navLinks: Object,
+    },
     data() {
         return {
+<<<<<<< HEAD
             store,
+=======
+            
+>>>>>>> 6b7eb3dbe474abf1c70d8a0c52c023a72021854e
             isFixed: false
         }
     },
@@ -17,7 +23,11 @@ export default {
         handleScroll() {
             const scrollTop = window.scrollY;
             this.isFixed = scrollTop > 160;
+<<<<<<< HEAD
         }
+=======
+        },
+>>>>>>> 6b7eb3dbe474abf1c70d8a0c52c023a72021854e
     },
     beforeDestroy() {
         window.removeEventListener('scroll', this.handleScroll);
@@ -91,7 +101,7 @@ export default {
 
             <!-- navbar -->
             <ul class="ms-navbar w-50 m-0 list-unstyled gap-3">
-                <li v-for="item in store.menu" :key="item">
+                <li v-for="item in navLinks.menu" :key="item">
                     <router-link :to="{ name: item.routeName }" class="text-white text-decoration-none">
                         {{ item.title }}
                         <i class="fa-solid fa-chevron-down"></i>
