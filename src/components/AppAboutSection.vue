@@ -59,7 +59,7 @@ export default {
                     <!-- <div class="ms-lg-icon ms-bg-light-green rounded-circle">
                         <a href="#" class="ms-bg-light-green"><i class="fa-solid fa-play fs-5 ms-color-purple"></i></a>
                     </div> -->
-                    <PlayButton class="position-relative z-2" />
+                    <PlayButton />
                 </div>
             </div>
             <!-- left container -->
@@ -68,7 +68,9 @@ export default {
                     <!-- <div class="ms-lg-icon ms-bg-light-green rounded-circle">
                         <a href="#" class="ms-bg-light-green"><i class="fa-solid fa-play fs-5 ms-color-purple"></i></a>
                     </div> -->
-                    <PlayButton class="position-relative z-2" />
+                    <div class="position-relative z-3">
+                        <PlayButton />
+                    </div>
                 </div>
             </div>
         </div>
