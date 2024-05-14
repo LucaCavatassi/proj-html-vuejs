@@ -6,6 +6,7 @@ import AppTestimonials from '../components/AppTestimonials.vue';
 import AppPortfolio from '../components/AppPortfolio.vue';
 import { store } from "../store";
 import AppFeature from '../components/AppFeature.vue';
+import AppGaming from '../components/AppGaming.vue';
 
 export default {
     props: {
@@ -18,6 +19,7 @@ export default {
         AppTestimonials,
         AppPortfolio,
         AppFeature,
+        AppGaming,
     },
     data() {
         return {
@@ -35,6 +37,7 @@ export default {
         <AppTestimonials />
         <AppPortfolio />
         <AppFeature />
+        <AppGaming />
     </div>
 </template>
 
