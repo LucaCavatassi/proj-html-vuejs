@@ -1,4 +1,5 @@
 <script>
+import AppAboutSection from '../components/AppAboutSection.vue';
 import AppHero from '../components/AppHero.vue';
 import { store } from "../store";
 
@@ -8,6 +9,7 @@ export default {
     },
     components:{
         AppHero,
+        AppAboutSection,
     },
     data() {
         return {
@@ -20,6 +22,7 @@ export default {
 <template>
     <div>
         <AppHero :page="store"/>
+        <AppAboutSection />
     </div>
 </template>
 
