@@ -139,6 +139,11 @@ export default {
         @include flex(row, center, center)
     }
 
+    .ms-icon,
+    .ms-sm-icon {
+        @include flex(row, center, center)
+    }
+
     .ms-search-cart
     {
         justify-content: end;

@@ -41,8 +41,3 @@ $green: #00AC4D;
     width: 25px;
     height: 25px;
 }
-
-.ms-icon,
-.ms-sm-icon {
-    @include flex(row, center, center)
-}
