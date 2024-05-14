@@ -1,21 +1,31 @@
 <script>
-import AppHero from '../components/AppHero.vue'
+import AppHero from '../components/AppHero.vue';
+import { store } from "../store";
 
 export default {
+    props: {
+        title: String,
+    },
     components:{
         AppHero,
     },
     data() {
         return {
-            
+            store,
         }
     },
+    methods: {
+        getProp(){
+            console.log(this.title);
+        }
+    }
 }
 </script>
 
 <template>
     <div>
-        <AppHero />
+        <button @click="getProp">prova</button>
+        <AppHero :page="store"/>
     </div>
 </template>
 

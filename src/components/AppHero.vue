@@ -1,13 +1,26 @@
 <script>
-export default {
 
+export default {
+    props:{
+        page: Object,
+    },
+    data() {
+        return {
+        }
+    },
+    methods:{
+        getStore(){
+            console.log(this.page);
+        }
+    }
 }
 </script>
 
 <template>
     <div class="ms-hero text-white">
         <section class="position-relative z-index-1">
-            <h1 class="fw-semibold">ABOUT US</h1>
+            <button @click="getStore">prova</button>
+            <h1 class="fw-semibold">{{  }}</h1>
             <span>
                 Home
                 <i class="fa-solid fa-arrow-right-long ms-color-light-green mx-1"></i>

@@ -40,19 +40,19 @@ export default {
                 <div class="ms-socials gap-3 px-3 border-end">
                     <!-- facebook icon -->
                     <span class="ms-social ms-icon ms-bg-dark-purple rounded-circle">
-                        <i class="fa-brands fa-facebook"></i>
+                        <a href="#" class="text-white"><i class="fa-brands fa-facebook"></i></a>
                     </span>
                     <!-- twitter icon -->
                     <span class="ms-social ms-icon ms-bg-dark-purple rounded-circle">
-                        <i class="fa-brands fa-twitter"></i>
+                        <a href="#" class="text-white"><i class="fa-brands fa-twitter"></i></a>
                     </span>
                     <!-- linkedin icon -->
                     <span class="ms-social ms-icon ms-bg-dark-purple rounded-circle">
-                        <i class="fa-brands fa-linkedin"></i>
+                        <a href="#" class="text-white"><i class="fa-brands fa-linkedin"></i></a>
                     </span>
                     <!-- instagram icon -->
                     <span class="ms-social ms-icon ms-bg-dark-purple rounded-circle">
-                        <i class="fa-brands fa-instagram"></i>
+                        <a href="#" class="text-white"><i class="fa-brands fa-instagram"></i></a>
                     </span>
                 </div>
                 <!-- assistance phone number -->
@@ -106,13 +106,13 @@ export default {
             <!-- search/cart -->
             <ul class="ms-search-cart w-25 m-0 list-unstyled gap-3 pe-3">
                 <li class="ms-icon bg-white rounded-circle ms-color-purple">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <a href="#" class="ms-color-purple"><i class="fa-solid fa-magnifying-glass"></i></a>
                 </li>
                 <li class="ms-icon bg-white rounded-circle ms-color-purple position-relative">
                     <div
                         class="ms-sm-icon position-absolute top-0 start-100 translate-middle ms-bg-light-purple text-white rounded-circle">
                         0</div>
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <a href="#" class="ms-color-purple"><i class="fa-solid fa-cart-shopping"></i></a>
                 </li>
             </ul>
         </header>
