@@ -17,14 +17,13 @@ export default {
 </script>
 
 <template>
-    <div class="ms-hero text-white">
+    <div class="ms-hero text-white container-fluid">
         <section class="position-relative z-index-1">
-            <button @click="getStore">prova</button>
-            <h1 class="fw-semibold">{{  }}</h1>
+            <h1 class="fw-semibold">{{ this.page.menu[this.page.activeIndex].title }}</h1>
             <span>
-                Home
+                <span>Home</span>
                 <i class="fa-solid fa-arrow-right-long ms-color-light-green mx-1"></i>
-                About Us
+                <span>{{ this.page.menu[this.page.activeIndex].title }}</span>
             </span>
         </section>
     </div>
@@ -66,6 +65,8 @@ export default {
     background-position: center;
     padding: 350px 0 150px;
     position: relative;
+    top: 0;
+    left: 0;
     overflow: hidden;
 }
 

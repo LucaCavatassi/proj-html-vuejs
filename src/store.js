@@ -76,4 +76,6 @@ export const store = reactive({
       path_icon: "fa-globe",
     },
   ],
+  // variabile per salvare l'indice che sarà utilizzato per AppHero
+  activeIndex: null,
 });

@@ -1,17 +1,27 @@
 <script>
+<<<<<<< HEAD
 
 import AppHero from '../components/AppHero.vue';
 import { store } from '../store';
 
+=======
+import { store } from '../store';
+>>>>>>> 1072275e68adadd637ca4064dcd05b2cfdb30e5c
 export default {
     data() {
         return {
             store,
         }
     },
+<<<<<<< HEAD
     components: {
         AppHero,
     },
+=======
+    mounted() {
+        console.log("funziona: ", this.store.menu[this.store.activeIndex].title);
+    }
+>>>>>>> 1072275e68adadd637ca4064dcd05b2cfdb30e5c
 }
 </script>
 

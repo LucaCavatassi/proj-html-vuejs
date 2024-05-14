@@ -11,7 +11,7 @@ export default {
     data() {
         return {
             store,
-            isFixed: false
+            isFixed: false,
         }
     },
     mounted() {
@@ -21,7 +21,10 @@ export default {
         handleScroll() {
             const scrollTop = window.scrollY;
             this.isFixed = scrollTop > 160;
-        }
+        },
+        saveIndex(index) {
+            this.store.activeIndex = index;
+        },
     },
     beforeDestroy() {
         window.removeEventListener('scroll', this.handleScroll);
@@ -95,8 +98,9 @@ export default {
 
             <!-- navbar -->
             <ul class="ms-navbar w-50 m-0 list-unstyled gap-3">
-                <li v-for="item in navLinks.menu" :key="item">
-                    <router-link :to="{ name: item.routeName }" class="text-white text-decoration-none">
+                <li v-for="(item, index) in navLinks.menu" :key="index">
+                    <router-link @click="saveIndex(index)" :to="{ name: item.routeName }"
+                        class="text-white text-decoration-none">
                         {{ item.title }}
                         <i class="fa-solid fa-chevron-down"></i>
                     </router-link>
@@ -123,39 +127,6 @@ export default {
     @use "../style/partials/variables" as *;
     @use "../style/partials/mixin" as *;
 
-    .ms-bg-light-purple{
-        background-color: $light-purple;
-    }
-    .ms-color-purple{
-        color: $light-purple;
-    }
-    .ms-bg-purple{
-        background-color: $purple;
-    }
-    .ms-color-purple{
-        color: $purple;
-    }
-    .ms-bg-dark-purple{
-        background-color: $dark-purple;
-    }
-    .ms-color-dark-purple{
-        color: $dark-purple;
-    }
-    .ms-bg-light-green{
-        background-color: $light-green;
-    }
-
-    .ms-icon{
-        width: 40px;
-        height: 40px;
-    }
-    .ms-sm-icon{
-        width: 25px;
-        height: 25px;
-    }
-    .ms-icon, .ms-sm-icon{
-        @include flex(row, center, center)
-    }
 
     .ms-socials, 
     .ms-assistance, 
@@ -165,6 +136,11 @@ export default {
     .ms-navbar,
     .ms-search-cart
     {
+        @include flex(row, center, center)
+    }
+
+    .ms-icon,
+    .ms-sm-icon {
         @include flex(row, center, center)
     }
 
