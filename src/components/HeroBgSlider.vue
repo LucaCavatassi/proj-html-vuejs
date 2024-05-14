@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-    <div class="container-fluid px-0">
+    <div class="container-fluid">
         <div class="row">
             <div class="col px-0">
 

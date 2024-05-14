@@ -1,9 +1,11 @@
 <script>
-import HeroOverlay from "/src/components/HeroOverlay.vue"
+import Hero from "/src/components/Hero.vue"
+import GamesCarouselPage from "/src/components/GamesCarouselPage.vue"
 
 export default {
     components: {
-        HeroOverlay, 
+        Hero,
+        GamesCarouselPage, 
     },
     data (){
         return{
@@ -13,7 +15,8 @@ export default {
 </script>
 
 <template>
-    <HeroOverlay />
+    <Hero />
+    <GamesCarouselPage />
 </template>
 
 <style scoped lang="scss">
