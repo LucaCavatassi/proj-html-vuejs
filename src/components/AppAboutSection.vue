@@ -1,5 +1,7 @@
 <script>
+import PlayButton from './PlayButton.vue'
 export default {
+  components: { PlayButton },
 
 }
 </script>
@@ -54,17 +56,19 @@ export default {
                 <div class="container-media">
                     <a href="#" class="text-decoration-none p-3 ms-bg-light-green rounded ms-color-purple me-5">Discover
                         More <i class="fa-solid fa-arrow-right-long"></i></a>
-                    <div class="ms-lg-icon ms-bg-light-green rounded-circle">
+                    <!-- <div class="ms-lg-icon ms-bg-light-green rounded-circle">
                         <a href="#" class="ms-bg-light-green"><i class="fa-solid fa-play fs-5 ms-color-purple"></i></a>
-                    </div>
+                    </div> -->
+                    <PlayButton class="position-relative z-2" />
                 </div>
             </div>
             <!-- left container -->
             <div class="w-50 h-100 container-video">
                 <div class="thumb-video p-250">
-                    <div class="ms-lg-icon ms-bg-light-green rounded-circle">
+                    <!-- <div class="ms-lg-icon ms-bg-light-green rounded-circle">
                         <a href="#" class="ms-bg-light-green"><i class="fa-solid fa-play fs-5 ms-color-purple"></i></a>
-                    </div>
+                    </div> -->
+                    <PlayButton class="position-relative z-2" />
                 </div>
             </div>
         </div>
