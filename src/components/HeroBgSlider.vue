@@ -6,14 +6,15 @@ export default {
         HeroOverlay,
     },
 
-    data (){
-        return{
-            bannerPhotos: ["banner1", "banner2", "banner3"]
+    data() {
+        return {
+            bannerPhotos: ["banner1", "banner2", "banner3"],
+            img: "banner-img"
         }
     },
 
-    methods:{
-        getPic (name) {
+    methods: {
+        getPic(name) {
             return new URL(`../assets/img/${name}.png`, import.meta.url).href
         },
     }
@@ -23,13 +24,17 @@ export default {
 <template>
     <div class="container-fluid px-0">
         <div class="row">
-            <div class="col">
+            <div class="col px-0">
                 <!-- OVERLAY-HERO -->
                 <HeroOverlay />
                 <!-- /OVERLAY-HERO -->
 
+                <div class="position-absolute z-3 d-flex w-100 h-100 justify-content-end align-items-center pt-5">
+                    <img class="ms_img img-fluid rounded-5" :src="getPic(img)" alt="">
+                </div>
+
                 <!-- CAROUSEL -->
-                <div id="bg_carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div id="bg_carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img :src="getPic(bannerPhotos[0])" class="d-block w-100" :alt="bannerPhotos[0]">
@@ -49,25 +54,33 @@ export default {
 </template>
 
 <style scoped lang="scss">
-.carousel-inner{
+.carousel-inner {
     position: relative;
-    img{
+
+    img {
         height: 100vh;
         object-fit: cover;
     }
-    
+
 }
 
 // BLACK LAYER
-    .carousel-inner::after {
-        content:'';
-        position:absolute;
-        left:0px;
-        top:0px;
-        width:100%;
-        height:100%;
-        background: rgba(0, 0, 0, 0.4);
-    }
+.carousel-inner::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 3;
+}
 // /BLACK LAYER
 
+.ms_img{
+    transform: rotate(-3deg);
+    width: 35%;
+    margin-right: 9rem;
+    margin-top: 4rem;
+}
 </style>

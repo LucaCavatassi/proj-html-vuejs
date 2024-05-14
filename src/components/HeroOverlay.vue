@@ -1,13 +1,26 @@
 <script>
 export default {
+    data(){
+        return{
+            
+        }
+    },
+
+    methods:{
     
+    }
 }
 </script>
 
 <template>
     <!-- OVERLAY-HERO -->
-    <div class="overlay">
-        <h1>BENVENUTI</h1>
+    <div class="container">
+        <div class="row overlay">
+            <div class="ms_margin col text-center">
+                <h1>BENVENUTI</h1>
+
+            </div>
+        </div>
     </div>
     <!-- /OVERLAY-HERO -->
 </template>
@@ -19,7 +32,9 @@ export default {
     h1 {
         color: red;
     }
+    .ms_margin{
+        margin-top: 200px;
+    }
 }
-
 
 </style>
