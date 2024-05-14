@@ -1,5 +1,5 @@
 <script>
-import PlayButton from "/src/components/PlayButton.vue"
+import PlayButton from "./PlayButton.vue";
 
 export default {
     components: {
@@ -36,9 +36,6 @@ export default {
         getPic(element) {
             return new URL(`../../assets/img/${element}.png`, import.meta.url).href
         },
-        getPerson() {
-            console.log(this.person);
-        }
     }
 }
 </script>

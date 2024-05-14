@@ -5,6 +5,7 @@ import AppTeam from '../components/AppTeam.vue';
 import AppTestimonials from '../components/AppTestimonials.vue';
 import AppPortfolio from '../components/AppPortfolio.vue';
 import { store } from "../store";
+import AppFeature from '../components/AppFeature.vue';
 
 export default {
     props: {
@@ -16,6 +17,7 @@ export default {
         AppTeam,
         AppTestimonials,
         AppPortfolio,
+        AppFeature,
     },
     data() {
         return {
@@ -29,9 +31,10 @@ export default {
     <div>
         <AppHero :page="store"/>
         <AppAboutSection />
-        <AppTeam/>
-        <AppTestimonials/>
+        <AppTeam />
+        <AppTestimonials />
         <AppPortfolio />
+        <AppFeature />
     </div>
 </template>
 
