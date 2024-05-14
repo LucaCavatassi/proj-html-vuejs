@@ -49,7 +49,7 @@ export default {
 </script>
 
 <template>
-    <footer>
+    <footer class="pt-5">
         <div class="footer-top">
             <div class="teams-icons">
                 <ul v-for="team in teamsArray">
@@ -66,7 +66,7 @@ export default {
                     <img src="../assets/img/menulogo.png" alt="Logo RaxG">
                     <p>Lorem ipsum dolor sit elit. Consectetur facilis exercitationem,
                         libero ad dolor sapiente! Sequi quae.</p>
-                    <div class="email-subscribe">
+                    <div class="email-subscribe d-flex pb-4">
                         <input type="text" placeholder="Enter Your Email" aria-label="Email">
                         <button>Subscribe</button>
                     </div>
@@ -140,10 +140,11 @@ export default {
 <style scoped lang="scss">
 // debug
 footer {
-    transform: translateY(300px);
     background-color: lightslategray;
 
     .footer-top {
+        // da sistemare
+        transform: translateY(-50px);
 
         .teams-icons {
             width: 80%;
