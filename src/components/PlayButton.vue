@@ -29,12 +29,20 @@ export default {
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
-                <div class="modal-header d-flex justify-content-end">
-                    <button @click="stopOnClick" type="button" class="btn" data-bs-dismiss="modal">&cross;</button>
+
+                <!-- CLOSE -->
+                <div class="modal-header justify-content-between">
+                    <span class="fw-bold">Click to close</span>
+                    <button id="closeBtn" @click="stopOnClick" type="button" class="btn" data-bs-dismiss="modal">&cross;</button>
                 </div>
+                <!-- /CLOSE -->
+
+                <!-- MODAL CONTENT -->
                 <div class="modal-body d-flex justify-content-center">
                     <iframe width="760" height="415" :src="videoUrl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
+                <!-- /MODAL CONTENT -->
+
             </div>
         </div>
     </div>
@@ -66,5 +74,20 @@ export default {
     .modal {
     --bs-modal-width: 600px;
     --bs-modal-bg: black;
+    }
+
+    .modal-header {
+        border: 0px;
+        color: white;
+        height: 50px;
+    }
+
+    .modal-body {
+        padding: 0;
+    }
+
+    #closeBtn{
+        width: 10%;
+        padding: 5px;
     }
 </style>
