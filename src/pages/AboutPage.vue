@@ -1,6 +1,7 @@
 <script>
 import AppAboutSection from '../components/AppAboutSection.vue';
 import AppHero from '../components/AppHero.vue';
+import AppPortfolioSection from '../components/AppPortfolioSection.vue';
 import { store } from "../store";
 
 export default {
@@ -10,6 +11,7 @@ export default {
     components:{
         AppHero,
         AppAboutSection,
+        AppPortfolioSection,
     },
     data() {
         return {
@@ -23,6 +25,7 @@ export default {
     <div>
         <AppHero :page="store"/>
         <AppAboutSection />
+        <AppPortfolioSection/>
     </div>
 </template>
 
