@@ -4,7 +4,7 @@ import { store } from "../store";
 
 export default {
     props: {
-        title: String,
+        title: String
     },
     components:{
         AppHero,
@@ -14,17 +14,15 @@ export default {
             store,
         }
     },
-    methods: {
-        getProp(){
-            console.log(this.title);
-        }
+    mounted(){
+        console.log("funziona: ", this.store.menu[this.store.activeIndex].title);
     }
 }
 </script>
 
 <template>
     <div>
-        <button @click="getProp">prova</button>
+        <h1>{{ this.store.menu[this.activeIndex] }}</h1>
         <AppHero :page="store"/>
     </div>
 </template>
