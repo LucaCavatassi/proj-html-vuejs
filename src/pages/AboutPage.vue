@@ -1,8 +1,9 @@
 <script>
 import AppAboutSection from '../components/AppAboutSection.vue';
 import AppHero from '../components/AppHero.vue';
-import AppPortfolioSection from '../components/AppPortfolioSection.vue';
+import AppTeam from '../components/AppTeam.vue';
 import AppTestimonials from '../components/AppTestimonials.vue';
+import AppPortfolio from '../components/AppPortfolio.vue';
 import { store } from "../store";
 
 export default {
@@ -12,8 +13,9 @@ export default {
     components:{
         AppHero,
         AppAboutSection,
-        AppPortfolioSection,
+        AppTeam,
         AppTestimonials,
+        AppPortfolio,
     },
     data() {
         return {
@@ -27,8 +29,9 @@ export default {
     <div>
         <AppHero :page="store"/>
         <AppAboutSection />
-        <AppPortfolioSection/>
+        <AppTeam/>
         <AppTestimonials/>
+        <AppPortfolio />
     </div>
 </template>
 

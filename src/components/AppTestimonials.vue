@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-    <div>
+    <div class="bg-danger">
         <!-- container -->
         <div class="container">
             <!-- inner container left -->
