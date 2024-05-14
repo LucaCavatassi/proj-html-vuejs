@@ -82,6 +82,10 @@ export default {
         height: 80px;
         width: 80px;
     }
+
+    .carousel-fade .active.carousel-item-start, .carousel-fade .active.carousel-item-end {
+        transition: opacity .8s 0s;
+    }
 }
 
 
