@@ -34,7 +34,7 @@ export default {
                 </div>
 
                 <!-- CAROUSEL -->
-                <div id="bg_carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+                <div id="bg_carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img :src="getPic(bannerPhotos[0])" class="d-block w-100" :alt="bannerPhotos[0]">
@@ -72,7 +72,7 @@ export default {
     top: 0px;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(39, 39, 39, 0.4);
     z-index: 3;
 }
 // /BLACK LAYER
