@@ -65,7 +65,7 @@ export default {
     top: 0px;
     width: 100%;
     height: 100%;
-    background: rgba(39, 39, 39, 0.4);
+    background: rgba(32, 32, 70, 0.4);
     z-index: 3;
 }
 // /BLACK LAYER
