@@ -58,7 +58,6 @@ export default {
                 </div>
             </div>
             <!-- /HEADER -->
-            <button @click="getPerson">person</button>
             <!-- MAIN -->
             <div class="row gap-4 mt-5 justify-content-center">
                 <div class="col" v-for="pers in person" :key="pers">

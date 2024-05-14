@@ -84,15 +84,6 @@ export default {
     .container{
         @include flex(row, center, center);
     }
-    .py-120{
-        padding: 120px 0;
-    }
-    .p-250{
-        padding: 250px;
-    }
-    .fs-50{
-        font-size: 50px;
-    }
     li{
         @include flex(row, start, center);
         list-style-type: none;
