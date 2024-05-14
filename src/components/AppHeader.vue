@@ -127,39 +127,6 @@ export default {
     @use "../style/partials/variables" as *;
     @use "../style/partials/mixin" as *;
 
-    .ms-bg-light-purple{
-        background-color: $light-purple;
-    }
-    .ms-color-purple{
-        color: $light-purple;
-    }
-    .ms-bg-purple{
-        background-color: $purple;
-    }
-    .ms-color-purple{
-        color: $purple;
-    }
-    .ms-bg-dark-purple{
-        background-color: $dark-purple;
-    }
-    .ms-color-dark-purple{
-        color: $dark-purple;
-    }
-    .ms-bg-light-green{
-        background-color: $light-green;
-    }
-
-    .ms-icon{
-        width: 40px;
-        height: 40px;
-    }
-    .ms-sm-icon{
-        width: 25px;
-        height: 25px;
-    }
-    .ms-icon, .ms-sm-icon{
-        @include flex(row, center, center)
-    }
 
     .ms-socials, 
     .ms-assistance, 

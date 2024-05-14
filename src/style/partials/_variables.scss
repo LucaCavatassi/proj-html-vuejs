@@ -2,7 +2,47 @@ $light-purple: #4350ff;
 $purple: #202046;
 $dark-purple: #1A1935;
 $light-green: #05cc7c;
-$green: #00AC4D
+$green: #00AC4D;
 
+.ms-bg-light-purple {
+    background-color: $light-purple;
+}
 
+.ms-color-purple {
+    color: $light-purple;
+}
 
+.ms-bg-purple {
+    background-color: $purple;
+}
+
+.ms-color-purple {
+    color: $purple;
+}
+
+.ms-bg-dark-purple {
+    background-color: $dark-purple;
+}
+
+.ms-color-dark-purple {
+    color: $dark-purple;
+}
+
+.ms-bg-light-green {
+    background-color: $light-green;
+}
+
+.ms-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.ms-sm-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.ms-icon,
+.ms-sm-icon {
+    @include flex(row, center, center)
+}
