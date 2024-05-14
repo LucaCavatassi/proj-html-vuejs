@@ -19,7 +19,7 @@ export default {
 
 <template>
   <div>
-    <AppHeader />
+    <AppHeader :navLinks="store"/>
     <router-view></router-view>
 
     <AppFooter :storeObj="store" />
