@@ -2,6 +2,7 @@
 
 import AppHero from '../components/AppHero.vue';
 import AppMaps from '../components/AppMaps.vue';
+import AppCard from '../components/AppCard.vue';
 import { store } from '../store';
 
 
@@ -9,10 +10,14 @@ export default {
     components: {
         AppHero,
         AppMaps,
+        AppCard,
     },
     data() {
         return {
             store,
+            phone: "Phone Number",
+            email: "Email Address",
+            address: "Address"
         }
     },
 }
@@ -22,78 +27,24 @@ export default {
     <AppHero :page="store" />
     <main>
         <div class="container py-5">
-            <div class="row">
+            <div class="row ">
                 <!-- Colonna di sinistra -->
-                <div class="col-md-4 left-col">
+                <div class="col-md-4 left-col text-white">
                     <h2>Get a Quote</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus unde itaque architecto.
                         Odio
                         voluptatibus quasi alias magni accusamus adipisci quam!</p>
                     <!-- Card phone -->
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <i class="img-fluid rounded-start"
-                                    :class="`fa-solid ${this.store.contacts[1].path_icon}`"></i>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Phone Number</h5>
-                                    <router-link class="card-text d-block"
-                                        :to="{ name: this.store.contacts[1].routeName }">
-                                        {{ this.store.contacts[1].title }}
-                                    </router-link>
-                                    <router-link class="card-text d-block"
-                                        :to="{ name: this.store.contacts[1].routeName }">
-                                        {{ this.store.contacts[1].title }}
-                                    </router-link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <AppCard :contactCard="store.contacts[1]" :nameCard="phone" />
                     <!-- /Card phone -->
 
                     <!-- Card email -->
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <i class="img-fluid rounded-start"
-                                    :class="`fa-solid ${this.store.contacts[2].path_icon}`"></i>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Email Address</h5>
-                                    <router-link class="card-text d-block"
-                                        :to="{ name: this.store.contacts[2].routeName }">
-                                        {{ this.store.contacts[2].title }}
-                                    </router-link>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <AppCard :contactCard="store.contacts[2]" :nameCard="email" />
                     <!-- /Card email -->
 
                     <!-- Card address -->
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <i class="img-fluid rounded-start"
-                                    :class="`fa-solid ${this.store.contacts[0].path_icon}`"></i>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Address</h5>
-                                    <router-link class="card-text d-block"
-                                        :to="{ name: this.store.contacts[0].routeName }">
-                                        {{ this.store.contacts[0].title }}
-                                    </router-link>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /Card phone -->
+                    <AppCard :contactCard="store.contacts[0]" :nameCard="address" />
+                    <!-- /Card address -->
                 </div>
                 <!-- /Colonna di sinistra -->
 
@@ -206,4 +157,10 @@ export default {
 
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+@use "../style/partials/variables" as *;
+
+main {
+    background-color: $dark-purple;
+}
+</style>
