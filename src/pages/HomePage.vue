@@ -1,8 +1,9 @@
 <script>
-import Hero from "/src/components/Hero.vue"
-import GamesCarouselPage from "/src/components/GamesCarouselPage.vue"
-import BattleCarouselPage from "/src/components/BattleCarouselPage.vue"
-import ShopCarouselPage from "/src/components/ShopCarouselPage.vue"
+import Hero from "../components/Hero.vue"
+import GamesCarouselPage from "../components/GamesCarouselPage.vue"
+import BattleCarouselPage from "../components/BattleCarouselPage.vue"
+import ShopCarouselPage from "../components/ShopCarouselPage.vue"
+import UpcomingMatchPage from "../components/UpcomingMatchPage.vue"
 
 
 export default {
@@ -10,7 +11,8 @@ export default {
         Hero,
         GamesCarouselPage, 
         BattleCarouselPage,
-        ShopCarouselPage
+        ShopCarouselPage,
+        UpcomingMatchPage
     },
     data (){
         return{
@@ -22,6 +24,7 @@ export default {
 <template>
     <Hero />
     <GamesCarouselPage />
+    <UpcomingMatchPage />
     <BattleCarouselPage />
     <ShopCarouselPage />
 </template>

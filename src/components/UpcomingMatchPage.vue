@@ -1,0 +1,258 @@
+<script>
+export default {
+    data() {
+        return{
+
+            isPUBG: true,
+            isAC: true,
+            isCD: true,
+            isMCX: true,
+            isAll: true,
+
+            games: ["PUBG Battlegrounds", "Assassin's Creed", "Call Of Duty", "Mortal Combat X"],
+            description: "Nulla porttitor accumsan tincidunt. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus magna justo.",
+
+            portFolio: [
+                {
+                    teamName: "Ninja Warrior Gaming",
+                    teamImg: "1",
+                    state: "Italia"
+                },
+                {
+                    teamName: "King Gaming",
+                    teamImg: "2",
+                    state: "USA"
+                },
+                {
+                    teamName: "Skull Gaming",
+                    teamImg: "3",
+                    state: "UK"
+                },
+                {
+                    teamName: "Panda Gaming",
+                    teamImg: "4",
+                    state: "China"
+                },
+                {
+                    teamName: "Witch Gaming",
+                    teamImg: "5",
+                    state: "Spain"
+                },
+                {
+                    teamName: "Astro Gaming",
+                    teamImg: "6",
+                    state: "France"
+                },
+            ]
+        }
+    },
+
+    methods: {
+        getPic(name) {
+            return new URL(`../assets/img/${name}.png`, import.meta.url).href
+        },
+
+        pubgFilter () {
+            this.isPUBG = true;
+            this.isAC = false;
+            this.isCD = false;
+            this.isMCX = false;
+            this.isAll = false;
+        },
+
+        acFilter () {
+            this.isPUBG = false;
+            this.isAC = true;
+            this.isCD = false;
+            this.isAll = false;
+            this.isMCX = false;
+        },
+
+        codFilter () {
+            this.isPUBG = false;
+            this.isAC = false;
+            this.isCD = true;
+            this.isMCX = false;
+            this.isAll = false;
+        },
+
+        mcxFilter () {
+            this.isPUBG = false;
+            this.isAC = false;
+            this.isCD = false;
+            this.isMCX = true;
+            this.isAll = false;
+
+        },
+
+        showAll () {
+            this.isPUBG= true;
+            this.isAC= true;
+            this.isCD= true;
+            this.isMCX= true;
+            this.isAll= true;
+        }
+    }
+}
+</script>
+
+<template>
+    <div class="container-fluid">
+            <div class="container py-5">
+                <div class="row flex-column">
+                    <div class="text-center"> 
+                        <span class="msgreen">Trending Battle</span>
+                        <h1 class="text-white">Upcoming Match</h1>
+                    </div>
+                    <div class="filter-buttons p-3 d-flex justify-content-center gap-2">
+                        <button @click="showAll" :class="{ msgreen: isAll}">ALL</button>
+                        <button @click="pubgFilter" :class="{ msgreen: isPUBG}">PUBG</button>
+                        <button @click="codFilter" :class="{ msgreen: isCD}">COD</button>
+                        <button @click="acFilter" :class="{ msgreen: isAC}">AC</button>
+                        <button @click="mcxFilter" :class="{ msgreen: isMCX}">MCX</button>
+                    </div>
+                    <div v-if="isMCX" class="col">
+                        <div class="container">
+                            <div class="row">
+
+                                <!-- FIGHTERS -->
+                                <div class="col-6">
+                                    ciao
+                                </div>
+                                <!-- /FIGHTERS -->
+
+                                <!-- GAME -->
+                                <div class="col-3 d-flex flex-column justify-content-center flex-grow-1">
+                                    <h1 class="fw-bold text-white fs-2">
+                                        {{ this.games[3]}}
+                                    </h1>
+                                    <span class="text-white"> {{ this.description }}</span>
+                                </div>
+                                <!-- /GAME -->
+
+                                <!-- MINIBADGE -->
+                                <div class="col-2 d-flex flex-column justify-content-center align-items-center px-0 py-5 my-5 mx-3 rounded">
+                                    <div class="card-info pt-3 pb-3">
+                                        <h1 class="fw-bold fs-3 mb-0 text-center">9.45</h1>
+                                        <span class="fw-semibold d-block text-center">1st November, 2022</span>
+                                    </div>
+                                    <div class="buttons d-flex gap-2 justify-content-center">
+                                        <button class="card-btn"><i class="fa-brands fa-youtube"></i></button>
+                                        <button class="card-btn"><i class="fa-solid fa-message"></i></button>
+                                    </div>
+                                </div>
+                                <!-- /MINIBADGE -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div v-if="isPUBG" class="col">
+                        <div class="container">
+                            <div class="row">
+
+                                <!-- FIGHTERS -->
+                                <div class="col-6">
+                                    ciao
+                                </div>
+                                <!-- /FIGHTERS -->
+
+                                <!-- GAME -->
+                                <div class="col-3 d-flex flex-column justify-content-center flex-grow-1">
+                                    <h1 class="fw-bold text-white fs-2">
+                                        {{ this.games[0]}}
+                                    </h1>
+                                    <span class="text-white"> {{ this.description }}</span>
+                                </div>
+                                <!-- /GAME -->
+
+                                <!-- MINIBADGE -->
+                                <div class="col-2 d-flex flex-column justify-content-center align-items-center px-0 py-5 my-5 mx-3 rounded">
+                                    <div class="card-info pt-3 pb-3">
+                                        <h1 class="fw-bold fs-3 mb-0 text-center">9.45</h1>
+                                        <span class="fw-semibold d-block text-center">1st November, 2022</span>
+                                    </div>
+                                    <div class="buttons d-flex gap-2 justify-content-center">
+                                        <button class="card-btn"><i class="fa-brands fa-youtube"></i></button>
+                                        <button class="card-btn"><i class="fa-solid fa-message"></i></button>
+                                    </div>
+                                </div>
+                                <!-- /MINIBADGE -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+        
+</template>
+
+<style scoped lang="scss">
+@use "../style/partials/variables" as *;
+
+.msgreen{
+        color: $green!important
+    }
+
+.card-btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: hidden;
+    background-color: $light-green;
+}
+
+.container-fluid {
+    background-color: $dark-purple
+}
+
+.filter-buttons {
+    button{
+        background: transparent;
+        border: none;
+        color: white;
+        font-weight: bold;
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
+}
+
+.col {
+    margin: 20px;
+    color: white;
+    background-color: $purple;
+    border: 1px solid $light-green;
+    border-radius: 15px
+}
+
+// HOVER
+.col:hover {
+    background-color: $violet;
+}
+.col:hover .col-2  {
+    background-color: $light-green;
+}
+.col:hover .card-btn  {
+    background-color: $dark-purple;
+    color: white
+}
+
+.text-center{
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    span {
+        font-weight: bolder;
+    }
+}
+
+.col-2 {
+    background-color: $dark-purple;
+}
+
+</style>
+
+
+<!-- QUANDO CLICCO IL NOME DEL GIOCO ALLORA LA VARIABILE TRUE DI TALE GIOCO DIVENTA VERA E TUTTE LE ALTRE FALSE -->
