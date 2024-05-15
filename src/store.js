@@ -76,6 +76,32 @@ export const store = reactive({
       path_icon: "fa-globe",
     },
   ],
+  teamsArray: [
+    {
+      src: "1.png",
+      name: "Logo Ninja Team",
+    },
+    {
+      src: "2.png",
+      name: "Logo King Team",
+    },
+    {
+      src: "3.png",
+      name: "Logo SkullG Team",
+    },
+    {
+      src: "4.png",
+      name: "Logo Panda Team",
+    },
+    {
+      src: "5.png",
+      name: "Logo Witch Team",
+    },
+    {
+      src: "6.png",
+      name: "Logo Astro Team",
+    },
+  ],
   // variabile per salvare l'indice che sarà utilizzato per AppHero
   activeIndex: null,
 });

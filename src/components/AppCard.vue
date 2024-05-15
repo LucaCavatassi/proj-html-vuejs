@@ -37,7 +37,6 @@ export default {
 <style scoped lang="scss">
 @use "../style/partials/variables" as *;
 
-
 .card {
     background-color: $dark-purple;
     transition: all 0.3s;

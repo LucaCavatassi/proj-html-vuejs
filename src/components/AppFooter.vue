@@ -1,6 +1,8 @@
 <script>
 import { store } from '../store';
 import { router } from '../router.js';
+import AppTeams from './AppTeams.vue'
+
 
 export default {
     props: {
@@ -9,56 +11,20 @@ export default {
     data() {
         return {
             store,
-            teamsArray: [
-                {
-                    src: "1.png",
-                    name: "Logo Ninja Team",
-                },
-                {
-                    src: "2.png",
-                    name: "Logo King Team",
-                },
-                {
-                    src: "3.png",
-                    name: "Logo SkullG Team",
-                },
-                {
-                    src: "4.png",
-                    name: "Logo Panda Team",
-                },
-                {
-                    src: "5.png",
-                    name: "Logo Witch Team",
-                },
-                {
-                    src: "6.png",
-                    name: "Logo Astro Team",
-                },
-            ],
         }
     },
-    methods: {
-        getImagePath(image) {
-            return new URL(`../assets/img/${image.src}`, import.meta.url).href;
-        },
-        getImageName(image) {
-            return new String(`${image.name}`);
-        },
-    },
+    components: {
+        AppTeams,
+    }
 }
 </script>
 
 <template>
     <footer class="pt-5">
         <div class="ms_footer-top">
-            <div class="container rounded">
-                <div class="row align-items-center">
-                    <div class="col ms_teams-icons p-4" v-for="team in teamsArray">
-                        <img :src="getImagePath(team)" :alt="getImageName(team)">
-                    </div>
-                </div>
-            </div>
-
+            <!-- Banner Teams -->
+            <AppTeams :storeObj="store" />
+            <!-- /Banner Teams -->
         </div>
         <div class="ms_footer-center">
             <div class="container position-relative z-2">
@@ -165,15 +131,7 @@ footer {
         top: 50px;
         z-index: 2;
 
-        .container {
-            background-color: $purple;
-        }
 
-        .ms_teams-icons {
-            img {
-                max-width: 100px;
-            }
-        }
     }
 
     .ms_footer-center {
@@ -182,6 +140,10 @@ footer {
         position: relative;
         padding-top: 10em;
         padding-bottom: 4em;
+
+        input::placeholder {
+            color: lightgrey;
+        }
 
         .ms_overlay {
             background-color: rgba(32, 32, 70, 0.50);
