@@ -1,7 +1,7 @@
 <script>
 import { store } from '../store';
 import { router } from '../router.js';
-import AppTeamsBanner from './AppTeamsBanner.vue/index.js'
+import AppTeamsBanner from './AppTeamsBanner.vue'
 
 
 export default {
