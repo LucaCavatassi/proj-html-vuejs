@@ -38,7 +38,7 @@ export default {
 </script>
 
 <template>
-    <div class="bg-primary">
+    <div class="ms-bg-dark-purple">
         <!-- container -->
         <div class="container">
 
@@ -109,6 +109,12 @@ export default {
 
 <style lang="scss" scoped>
 @use "../style/partials/variables" as *;
+@use "../style/partials/mixin" as *;
+
+.container{
+    @include flex(row, center, center);
+}
+
 
 .btn {
     background-color: $light-green;

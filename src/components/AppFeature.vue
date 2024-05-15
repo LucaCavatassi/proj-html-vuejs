@@ -110,6 +110,5 @@ export default {
     right: 0;
     background-color: rgba($color: black, $alpha: 0.5);
     z-index: 1;
-    border-radius: 15px;
 }
 </style>
