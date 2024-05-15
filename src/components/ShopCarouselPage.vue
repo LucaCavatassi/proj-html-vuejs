@@ -3,7 +3,7 @@ export default {
     data (){
         return{
             imgUrl: "../src/assets/img/shop-bg.png",
-            isShown: true,
+            isShown: false,
             cards_pos: 0,
             portFolio: [
                 {
@@ -103,11 +103,16 @@ export default {
 
             <!-- MAIN CARDS -->
             <div class="row mt-5 pb-5 justify-content-center">
-                <div class="col" v-for="element in cardsToDisplay">
+                <div class="col-3" v-for="element in cardsToDisplay">
 
                     <!-- IMG -->
                     <div class="img-cont mb-2 d-flex justify-content-center">
                         <img :src="getPic(element.img)" :alt="element">
+                        <div class="buttons">
+                            <button class="card-btn m-1" @click="isShown === true"><i class="fa-solid fa-eye"></i></button>
+                            <button class="card-btn m-1"><i class="fa-solid fa-cart-flatbed"></i></button>
+                            <button class="card-btn m-1"><i class="fa-solid fa-heart"></i></button>
+                        </div>
                     </div>
                     <!-- /IMG -->
 
@@ -156,19 +161,28 @@ export default {
     .ms-mg {
         margin-top: 0px;
     }
-    
+
     .ms-btn {
         height: 40px;
         width: 40px;
         border: hidden;
     }
-
+    
+    .card-btn {
+        height: 50px;
+        width: 50px;
+        padding: 15px;
+        border-radius: 50%;
+        border: hidden;
+        background-color: $light-violet;
+        color: white;
+    }
+    
     // CONTAINER INDEX
     .container{
         position: relative;
         z-index: 2;
     }
-
     // BG
     .container-fluid {
         position: relative;
@@ -187,14 +201,31 @@ export default {
     }   
 
     // HOVER
-    .col:hover {
+    .col-3:hover .buttons {
         cursor: pointer;
+        display: block;
+    }
+
+    .card-btn:hover {
+        background-color: $light-green
     }
 
     .img-cont{
         background-color: $purple;
         padding: 30px;
         border-radius: 15px;
+        position: relative;
+        min-height: 260px;
+        img {
+            max-width: 100%;
+            object-fit: contain;
+        }
+        .buttons{
+            display: none;
+            position: absolute;
+            bottom: 50px;
+
+        }
     }
 
     .txt-cont{
