@@ -4,6 +4,11 @@ $dark-purple: #1A1935;
 $light-green: #05cc7c;
 $green: #00AC4D;
 $violet: #3C3C93;
+$light-violet: #333287;
+
+.ms-bg-light-violet {
+    background-color: $light-violet;
+}
 
 .ms-bg-light-purple {
     background-color: $light-purple;
@@ -47,12 +52,21 @@ $violet: #3C3C93;
     height: 25px;
 }
 
+.ms-lg-icon {
+    width: 85px;
+    height: 85px;
+}
+
 .py-120 {
     padding: 120px 0;
 }
 
 .py-150 {
     padding: 150px 0;
+}
+
+.py-200 {
+    padding: 200px 0;
 }
 
 .p-250 {
