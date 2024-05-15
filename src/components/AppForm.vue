@@ -78,12 +78,12 @@ export default {
                 <!-- /Input Subject -->
 
                 <!-- Input Message -->
-                <div class="mb-4">
+                <div class="mb-4 message-box">
                     <label for="message" class="form-label fw-bold pb-1">Message</label>
-                    <div class="d-flex justify-content-center align-items-start px-2 ms_form">
+                    <div class="d-flex justify-content-center align-items-start ps-2 ms_form">
                         <textarea class="form-control bg-transparent border-0 ps-2" id="phone"
                             placeholder="Your Message" rows="7"></textarea>
-                        <i class="fa-solid fa-pencil pe-2 pt-3"></i>
+                        <i class="fa-solid fa-pencil pe-2 pt-3 inner-icon"></i>
                     </div>
                 </div>
                 <!-- /Input Message -->
@@ -133,7 +133,16 @@ form {
         textarea::placeholder {
             color: grey;
         }
+    }
 
+    .message-box {
+        position: relative;
+    }
+
+    .inner-icon {
+        position: absolute;
+        right: 5px;
+        z-index: 5;
     }
 }
 </style>
