@@ -37,15 +37,15 @@ export default {
                         tortor eget
                         felis porttitor volutpat.</p>
                     <!-- Card phone -->
-                    <!-- <AppCard :contactCard="store.contacts[1]" :nameCard="phone" /> -->
+                    <AppCard :contactCard="store.contacts[1]" :nameCard="phone" />
                     <!-- /Card phone -->
 
                     <!-- Card email -->
-                    <!-- <AppCard :contactCard="store.contacts[2]" :nameCard="email" /> -->
+                    <AppCard :contactCard="store.contacts[2]" :nameCard="email" />
                     <!-- /Card email -->
 
                     <!-- Card address -->
-                    <!-- <AppCard :contactCard="store.contacts[0]" :nameCard="address" /> -->
+                    <AppCard :contactCard="store.contacts[0]" :nameCard="address" />
                     <!-- /Card address -->
                 </div>
                 <!-- /Colonna di sinistra -->
