@@ -22,7 +22,7 @@ export default {
     },
     methods: {
         getPic(name) {
-            return new URL(`./assets/img/v-${name}.png`, import.meta.url).href
+            return new URL(`../assets/img/v-${name}.png`, import.meta.url).href
         },
     }
 }
@@ -51,11 +51,11 @@ export default {
                     <div class="outer-card-container">
                         <div class="card-container" v-for="(curCard, index) in card" :key="index">
                             <div>
-                                <img :src="`../assets/img/v-${curCard.imgUrl}`" alt="" class="img-fluid card-item">
+                                <img :src="getPic(curCard.imgUrl)" alt="" class="img-fluid card-item">
                             </div>
                             <section>
-                                <h3 class="card-title">{{curCard.title}}</h3>
-                                <p class="card-text">{{ curCard.desc }}</p>
+                                <h3 class="card-title text-center">{{curCard.title}}</h3>
+                                <p class="card-text text-center">{{ curCard.desc }}</p>
                             </section>
                         </div>
                     </div>
