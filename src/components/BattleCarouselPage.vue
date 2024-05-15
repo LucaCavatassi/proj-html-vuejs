@@ -7,32 +7,32 @@ export default {
     },
     data (){
         return{
-            isShown: true,
+            imgUrl: "../src/assets/img/bg2.png",
             cards_pos: 0,
             portFolio: [
                 {
-                    name: "Assasin's Creed",
+                    name: "Ninja Warrior Gaming",
                     img: "protfolio1",
                     description: "Donec sollicitudin malesuada.",
                     teamImg: "1"
                 },
 
                 {
-                    name: "Call Of Duty",
+                    name: "Ninja Warrior Gaming",
+                    img: "protfolio1",
+                    description: "Donec sollicitudin malesuada.",
+                    teamImg: "1"
+                },
+
+                {
+                    name: "Witch Gaming",
                     img: "protfolio2",
                     description: "Donec sollicitudin malesuada.",
                     teamImg: "5"
                 },
 
                 {
-                    name: "Tomb Raider",
-                    img: "protfolio3",
-                    description: "Donec sollicitudin malesuada.",
-                    teamImg: "6"
-                },
-
-                {
-                    name: "Mortal Combat X",
+                    name: "Skull-G Gaming",
                     img: "protfolio4",
                     description: "Donec sollicitudin malesuada.",
                     teamImg: "3"
@@ -43,7 +43,7 @@ export default {
     },
     computed: {
         cardsToDisplay() {
-            return [...this.portFolio, ...this.portFolio].slice(this.cards_pos, this.cards_pos + 4)
+            return [...this.portFolio, ...this.portFolio].slice(this.cards_pos, this.cards_pos + 3)
         },
     },
     
@@ -66,7 +66,7 @@ export default {
 </script>
 
 <template>
-    <div class="container-fluid">
+    <div class="container-fluid" :style='{ backgroundImage: `url("${imgUrl}")` }'>
         <div class="container">
             <!-- HEADER -->
             <div class="row">
@@ -75,8 +75,8 @@ export default {
 
                         <!-- TEXT -->
                         <div class="w-50 ms-mg">
-                            <h5 class="ms-green">Trending Games</h5>
-                            <span class="ms-fs fw-bold text-white">Choose Who's The Best In The World!</span>
+                            <h5 class="ms-green">Upcoming Match</h5>
+                            <span class="ms-fs fw-bold text-white">Keep Eyes & Manage upcoming Battle</span>
                         </div>
                         <!-- TEXT -->
 
@@ -103,38 +103,16 @@ export default {
 
             <!-- MAIN CARDS -->
             <div class="row mt-5 justify-content-center">
-                <div class="col" v-for="element in cardsToDisplay">
-
-                    <!-- IMG -->
-                    <div class="card">
-                        <img :src="getPic(element.img)" :alt="element">
-                        <span class="newBadge">New</span>
-                        <div class="playBadge">
-                            <PlayButtonSmall/>
-                        </div>
-                    </div>
-                    <!-- /IMG -->
-
-
-                    
+                <div class="col-4" v-for="element in cardsToDisplay">
                     <!-- INFO -->
                     <div class="ms-card-body">
-                        <div class="card-container">
-                            <div class="row align-items-center">
-                                <div class="col-4 ps-3">
-                                    <div class="img-cont d-flex justify-content-center align-items-center">
-                                        <img :src="getPic(element.teamImg)" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-6 flex-grow-1 ps-1">
-                                    <div class="txt-cont"> 
-                                        <h5 class="mb-0">{{ element.name }}</h5>
-                                        <p class="card-text">{{ element.description }}</p>
-                                    </div>
-                                </div>
+                        <div class="card">
+                            <img :src="getPic(element.teamImg)" class="card-img-top mt-4 m-auto" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">{{ element.name }}</h5>
+                                <p class="card-text"></p>
+                                <a href="#" class="btn btn-primary">View More</a>
                             </div>
-                            
-                            
                         </div>
                     </div>
                     <!-- /INFO -->
@@ -171,93 +149,48 @@ export default {
         border: hidden;
     }
     // SIZING
-    .container-fluid {
-        background-color: $purple;
-        height: 100vh;
+    .container {
+        padding-bottom: 60px;
     }
 
-    .col {
-        width: calc(100% / 4);
-        position: relative;
-    }
-
-    // HOVER
-    .col:hover {
-        cursor: pointer;
-    }
-
-    .col:hover .card-container{
+    // BTN
+    .btn {
         background-color: $light-green;
-
+        font-weight: bold;
+        border: hidden;
+        padding: 15px 30px;
+        color: $purple;
     }
 
-    .col:hover .playBadge {
-        display: block;
+    .btn:hover {
+    background: transparent;
+    border: 1px solid $light-green;
+    color: $light-green;
     }
 
-
-    .all-cont{
-        position: relative;
-    }
     // CARDS
     .card {
         border: hidden;
-        position: relative;
-    }
-    
-    .newBadge {
-        position: absolute;
-        color: black;
-        background-color: $light-green;
-        padding: 3px 10px;
-    }
-
-    .playBadge {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        display: none;
-    }
-
-    // CARD BODY
-    .ms-card-body{
-        width: 100%;
-        margin-top: -20px;
-        position: relative;
-        z-index: 2;
-    }
-
-    .card-container {
-        width: 90%;
-        background-color: $dark-purple;
-        margin: 0 auto;
-        padding: 10px;
-        
-        .img-cont{
-            width: 60px;
-            height: 60px;
-            background-color: $light-purple;
-            border-radius: 50%;
-            padding: 10px;
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-            }
+        background-color: $purple;
+        color: white;
+        img {
+            width: 85%;
+            aspect-ratio: 1;
+        }
+        .card-img-top{
+            background-color: $dark-purple;
+            border-radius: 10px;
+            padding: 60px;
         }
 
-        .txt-cont{
-            color: white;
-            h5{
-                font-size: 1.2rem;
+        .card-body {
+            h5 {
+                font-size: 1.5rem;
                 font-weight: bold;
             }
-
-            p {
-                font-size: 0.8rem;
-            }
         }
     }
+    
 
 
 
