@@ -1,7 +1,7 @@
 <script>
 import { store } from '../store';
 import { router } from '../router.js';
-import AppTeams from './AppTeams.vue'
+import AppTeamsBanner from './AppTeamsBanner.vue/index.js'
 
 
 export default {
@@ -14,7 +14,7 @@ export default {
         }
     },
     components: {
-        AppTeams,
+        AppTeamsBanner,
     }
 }
 </script>
@@ -23,7 +23,7 @@ export default {
     <footer class="pt-5">
         <div class="ms_footer-top">
             <!-- Banner Teams -->
-            <AppTeams :storeObj="store" />
+            <AppTeamsBanner :storeObj="store" />
             <!-- /Banner Teams -->
         </div>
         <div class="ms_footer-center">
