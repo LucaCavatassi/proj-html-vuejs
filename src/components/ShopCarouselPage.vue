@@ -15,7 +15,7 @@ export default {
                 },
 
                 {
-                    name: "Gaming Mouse",
+                    name: "Asus Rog Strix A53",
                     img: "s2",
                     score: "",
                     originalPrice: 599,
@@ -23,7 +23,7 @@ export default {
                 },
 
                 {
-                    name: "Visore Gaming",
+                    name: "Samsung Gear VR",
                     img: "s3",
                     score: "",
                     originalPrice: 599,
@@ -31,7 +31,7 @@ export default {
                 },
 
                 {
-                    name: "Cuffie Beats",
+                    name: "Beats Pro",
                     img: "s4",
                     score: "",
                     originalPrice: 599,
@@ -60,7 +60,7 @@ export default {
     },
 
     mounted(){
-        // setInterval(this.next,2500);
+        setInterval(this.next,2500);
     },
 }
 </script>
@@ -102,39 +102,35 @@ export default {
             <!-- /HEADER -->
 
             <!-- MAIN CARDS -->
-            <div class="row mt-5 justify-content-center">
+            <div class="row mt-5 pb-5 justify-content-center">
                 <div class="col" v-for="element in cardsToDisplay">
 
                     <!-- IMG -->
-                    <div class="card">
+                    <div class="img-cont mb-2 d-flex justify-content-center">
                         <img :src="getPic(element.img)" :alt="element">
                     </div>
                     <!-- /IMG -->
 
-
-                    
                     <!-- INFO -->
-                    <div class="ms-card-body">
-                        <div class="card-container">
-                            <div class="row align-items-center">
-                                <div class="col-4 ps-3">
-                                    <div class="img-cont d-flex justify-content-center align-items-center">
-                                        <img :src="getPic(element.teamImg)" alt="">
-                                    </div>
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <div class="txt-cont"> 
+                                <div class="stars mt-3">
+                                    <i class="fa-solid fa-star-half-stroke fs-5 ms-green"></i>
+                                    <i class="fa-solid fa-star-half-stroke fs-5 ms-green"></i>
+                                    <i class="fa-solid fa-star-half-stroke fs-5 ms-green"></i>
+                                    <i class="fa-solid fa-star-half-stroke fs-5"></i>
+                                    <i class="fa-solid fa-star-half-stroke fs-5"></i>
                                 </div>
-                                <div class="col-6 flex-grow-1 ps-1">
-                                    <div class="txt-cont"> 
-                                        <h5 class="mb-0">{{ element.name }}</h5>
-                                        <p class="card-text">{{ element.description }}</p>
-                                    </div>
+                                <h5 class="mt-2 mb-0">{{ element.name }}</h5>
+                                <div class="d-flex gap-3">
+                                    <p class="discounted-price">${{ element.discountedPrice }}.00</p>
+                                    <p class="original-price">${{ element.originalPrice }}.00</p>
                                 </div>
                             </div>
-                            
-                            
                         </div>
                     </div>
                     <!-- /INFO -->
-
                 </div>
             </div>
             <!-- /MAIN CARDS-->
@@ -166,101 +162,19 @@ export default {
         width: 40px;
         border: hidden;
     }
-    // SIZING
-    .container-fluid {
-        background-color: $purple;
-        height: 100vh;
-    }
 
-    .col {
-        width: calc(100% / 4);
-        position: relative;
-    }
-
-    // HOVER
-    .col:hover {
-        cursor: pointer;
-    }
-
-    .col:hover .card-container{
-        background-color: $light-green;
-
-    }
-
-    .col:hover .playBadge {
-        display: block;
-    }
-
-
-    .all-cont{
-        position: relative;
-    }
-    // CARDS
-    .card {
-        border: hidden;
-        position: relative;
-    }
-    
-    .newBadge {
-        position: absolute;
-        color: black;
-        background-color: $light-green;
-        padding: 3px 10px;
-    }
-
-    .playBadge {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        display: none;
-    }
-
-    // CARD BODY
-    .ms-card-body{
-        width: 100%;
-        margin-top: -20px;
+    // CONTAINER INDEX
+    .container{
         position: relative;
         z-index: 2;
     }
 
-    .card-container {
-        width: 90%;
-        background-color: $dark-purple;
-        margin: 0 auto;
-        padding: 10px;
-        
-        .img-cont{
-            width: 60px;
-            height: 60px;
-            background-color: $light-purple;
-            border-radius: 50%;
-            padding: 10px;
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-            }
-        }
-
-        .txt-cont{
-            color: white;
-            h5{
-                font-size: 1.2rem;
-                font-weight: bold;
-            }
-
-            p {
-                font-size: 0.8rem;
-            }
-        }
-    }
-
-
+    // BG
     .container-fluid {
         position: relative;
     }
 
-    // BLACK LAYER
+    // BG BLACK LAYER
     .container-fluid::before {
         content: '';
         position: absolute;
@@ -268,8 +182,41 @@ export default {
         top: 0px;
         width: 100%;
         height: 100%;
-        background: rgba(32, 32, 70, 0.4);
+        background: rgba(32, 32, 70, 0.7);
         z-index: 0;
     }   
+
+    // HOVER
+    .col:hover {
+        cursor: pointer;
+    }
+
+    .img-cont{
+        background-color: $purple;
+        padding: 30px;
+        border-radius: 15px;
+    }
+
+    .txt-cont{
+        color: white;
+
+        h5 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        .discounted-price {
+            color: $light-green;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+        }
+}
 
 </style>

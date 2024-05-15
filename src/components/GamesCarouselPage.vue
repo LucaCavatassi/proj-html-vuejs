@@ -173,7 +173,7 @@ export default {
     // SIZING
     .container-fluid {
         background-color: $purple;
-        height: 100vh;
+        padding-bottom: 100px;
     }
 
     .col {

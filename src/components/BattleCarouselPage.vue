@@ -228,7 +228,7 @@ export default {
         top: 0px;
         width: 100%;
         height: 100%;
-        background: rgba(32, 32, 70, 0.4);
+        background: rgba(32, 32, 70, 0.7);
         z-index: 0;
     }   
 
