@@ -165,15 +165,16 @@ export default {
     .btn {
         background-color: $light-green;
         font-weight: bold;
-        border: hidden;
         padding: 15px 30px;
         color: $purple;
-    }
+        border-color: $light-green;
 
+    }
+    
     .btn:hover {
-    background: transparent;
-    border: 1px solid $light-green;
-    color: $light-green;
+        border-color: $light-green;
+        background: transparent;
+        color: $light-green;
     }
 
     // CARDS
@@ -183,6 +184,7 @@ export default {
         color: white;
         img {
             width: 85%;
+            min-width: 250px;
             aspect-ratio: 1;
         }
         .card-img-top{
