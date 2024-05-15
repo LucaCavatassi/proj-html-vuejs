@@ -19,11 +19,11 @@ export default {
 <template>
     <div class="ms-hero text-white container-fluid">
         <section class="position-relative z-index-1">
-            <h1 class="fw-semibold">{{ this.page.menu[this.page.activeIndex].title }}</h1>
+            <!-- <h1 class="fw-semibold">{{ this.page.menu[this.page.activeIndex].title }}</h1> -->
             <span>
                 <span>Home</span>
                 <i class="fa-solid fa-arrow-right-long ms-color-light-green mx-1"></i>
-                <span>{{ this.page.menu[this.page.activeIndex].title }}</span>
+                <!-- <span>{{ this.page.menu[this.page.activeIndex].title }}</span> -->
             </span>
         </section>
     </div>
