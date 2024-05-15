@@ -7,13 +7,28 @@ export default {
     },
     data (){
         return{
-            portfolioImg: ["protfolio1","protfolio2","protfolio3","protfolio4"]
+            portfolioImg: ["protfolio1","protfolio2","protfolio3","protfolio4"],
+            cards_pos: 0,
         }
+    },
+    computed: {
+        cardsToDisplay() {
+            return [...this.portfolioImg, ...this.portfolioImg].slice(this.cards_pos, this.cards_pos + 4)
+        },
     },
     methods: {
         getPic(name) {
             return new URL(`../assets/img/${name}.png`, import.meta.url).href
         },
+        prev() {
+            this.cards_pos = (this.cards_pos + this.portfolioImg.length - 1) % this.portfolioImg.length;
+        },
+        next() {
+            this.cards_pos = (this.cards_pos + 1) % this.portfolioImg.length;
+        },
+    },
+    mounted(){
+    setInterval(this.next,2000);
     }
 }
 </script>
@@ -31,7 +46,12 @@ export default {
                         </div>
 
                         <div class="w-50 ms-mg text-white">
-                            <h1>ciao</h1>
+                            <button @click="prev">
+                                &lt;&lt;
+                            </button>
+                            <button @click="next">
+                                &gt;&gt;
+                            </button>
                         
                         </div>
                     </div>
@@ -41,7 +61,7 @@ export default {
 
             <!-- MAIN -->
             <div class="row gap-4 mt-5 justify-content-center">
-                <div class="col" v-for="element in portfolioImg">
+                <div class="col" v-for="element in cardsToDisplay">
                     <div class="card">
                         <img :src="getPic(element)" class="img-fluid" :alt="element">
                         <div class="card-body">
