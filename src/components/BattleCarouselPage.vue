@@ -7,7 +7,7 @@ export default {
     },
     data (){
         return{
-            imgUrl: "../src/assets/img/bg2.png",
+            imgUrl: "../src/assets/img/match-bg.png",
             cards_pos: 0,
             portFolio: [
                 {
@@ -71,10 +71,10 @@ export default {
             <!-- HEADER -->
             <div class="row">
                 <div class="col mt-5">
-                    <div class="d-flex justify-content-between">
+                    <div class="info-text d-flex justify-content-between">
 
                         <!-- TEXT -->
-                        <div class="w-50 ms-mg">
+                        <div class=" w-50 ms-mg">
                             <h5 class="ms-green">Upcoming Match</h5>
                             <span class="ms-fs fw-bold text-white">Keep Eyes & Manage upcoming Battle</span>
                         </div>
@@ -161,6 +161,11 @@ export default {
         padding-bottom: 60px;
     }
 
+    .info-text {
+        position: relative;
+        z-index: 4;
+    }
+
     // BTN
     .btn {
         background-color: $light-green;
@@ -209,5 +214,22 @@ export default {
         border: hidden;
         background-color: $light-green;
     }
+
+
+    .container-fluid {
+        position: relative;
+    }
+
+    // BLACK LAYER
+    .container-fluid::before {
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background: rgba(32, 32, 70, 0.4);
+        z-index: 0;
+    }   
 
 </style>
