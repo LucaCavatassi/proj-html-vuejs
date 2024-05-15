@@ -40,10 +40,10 @@ export default {
 <template>
     <div class="ms-bg-dark-purple">
         <!-- container -->
-        <div class="container">
+        <div class="container py-200">
 
             <!-- inner container left -->
-            <div class="w-50 position-relative thumb rounded-4 text-white">
+            <div class="w-50 left-container thumb position-relative rounded-4 text-white">
                 <!-- client -->
                 <div class="position-absolute left-0 bottom-0 p-3 h-50">
                     <div class="d-flex align-items-center">
@@ -74,22 +74,22 @@ export default {
             </div>
 
             <!-- inner container right -->
-            <div>
-                <div class="card mb-3" v-for="(card, index) in cards" :key="index">
+            <div class="w-50 right-container">
+                <div class="mb-3" v-for="(card, index) in cards" :key="index">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img :src="`http://localhost:5173/src/assets/img/${card.imgUrl}.png`" class="img-fluid"
+                            <img :src="`http://localhost:5173/src/assets/img/${card.imgUrl}.png`" class="img-fluid h-100"
                                 :alt="card.title">
                         </div>
                         <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ card.title }}</h5>
-                                <p class="card-text">{{ card.description }}</p>
-                                <div>
+                            <div class="text-white ms-bg-purple rounded-end-4 p-3 h-100">
+                                <h5 class="card-title mb-1 fw-bold">{{ card.title }}</h5>
+                                <p class="card-text mb-2">{{ card.description }}</p>
+                                <div class="client">
                                     <!-- client img -->
                                     <div>
                                         <img :src="`http://localhost:5173/src/assets/img/${clients[this.clientIndex[index]].imgUrl}.png`"
-                                            class="img-fluid" :alt="clients.name">
+                                            class="img-fluid ms-md-icon" :alt="clients.name">
                                     </div>
                                     <section>
                                         <!-- name -->
@@ -129,7 +129,6 @@ export default {
 }
 
 .thumb{
-    height: 760px;
     background-image: url("../assets/img/newsleft.png");
     background-image: cover;
     background-position: center;
@@ -138,5 +137,18 @@ export default {
 .img-user{
     width: 60px;
     height: 60px;
+}
+
+.client{
+    @include flex(row, start, center);
+}
+
+.left-container, .right-container{
+    height: 760px;
+    padding: 20px;
+}
+
+.right-container {
+    @include flex(column, space-between, center)
 }
 </style>
