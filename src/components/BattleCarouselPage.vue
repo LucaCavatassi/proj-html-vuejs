@@ -66,7 +66,7 @@ export default {
 </script>
 
 <template>
-    <div class="container-fluid" :style='{ backgroundImage: `url("${imgUrl}")` }'>
+    <div class="container-fluid" :style='{ backgroundImage: `url("${imgUrl}")`, backgroundSize: "cover" }'>
         <div class="container">
             <!-- HEADER -->
             <div class="row">
@@ -106,11 +106,19 @@ export default {
                 <div class="col-4" v-for="element in cardsToDisplay">
                     <!-- INFO -->
                     <div class="ms-card-body">
-                        <div class="card">
+                        <div class="card pb-4">
                             <img :src="getPic(element.teamImg)" class="card-img-top mt-4 m-auto" alt="...">
                             <div class="card-body text-center">
                                 <h5 class="card-title">{{ element.name }}</h5>
-                                <p class="card-text"></p>
+                                <div class="buttons d-flex gap-2 justify-content-center">
+                                    <button class="card-btn"><i class="fa-brands fa-youtube"></i></button>
+                                    <button class="card-btn"><i class="fa-solid fa-message"></i></button>
+                                </div>
+
+                                <div class="card-info pt-3 pb-3">
+                                    <h1 class="fw-bold mb-0">9.45</h1>
+                                    <span class="fw-semibold">1st November, 2022</span>
+                                </div>
                                 <a href="#" class="btn btn-primary">View More</a>
                             </div>
                         </div>
@@ -132,7 +140,7 @@ export default {
     }
 
     .ms-bg-green{
-        background-color: $green
+        background-color: $green;
     }
 
     .ms-fs{
@@ -192,6 +200,12 @@ export default {
     }
     
 
-
+    .card-btn{
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: hidden;
+        background-color: $light-green;
+    }
 
 </style>
