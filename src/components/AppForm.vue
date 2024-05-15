@@ -5,28 +5,30 @@ export default {
 </script>
 
 <template>
-    <form>
+    <form class="rounded">
         <div class="row">
             <div class="col-md-6">
                 <!-- Input First Name -->
-                <div class="mb-3">
-                    <label for="firstname" class="form-label fw-bold pb-1 pb-1">First
+                <div class="mb-4">
+                    <label for="firstname" class="form-label fw-bold pb-1">First
                         Name</label>
-                    <div class="d-flex justify-content-center align-items-center bg-warning px-2">
-                        <input type="text" class="form-control bg-transparent border-0 ps-0" id="firstname"
+                    <div class="d-flex justify-content-center align-items-center px-2 ms_form 
+                    ">
+                        <input type="text" class="form-control bg-transparent border-0 ps-2" id="firstname"
                             placeholder="First Name">
-                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-user pe-2"></i>
                     </div>
                 </div>
                 <!-- /Input First Name -->
 
                 <!-- Input Phone number -->
-                <div class="mb-3">
+                <div class="mb-4">
                     <label for="phone" class="form-label fw-bold pb-1">Phone</label>
-                    <div class="d-flex justify-content-center align-items-center bg-warning px-2">
-                        <input type="number" class="form-control bg-transparent border-0 ps-0" id="phone"
+                    <div class="d-flex justify-content-center align-items-center px-2 ms_form
+                    ">
+                        <input type="text" class="form-control bg-transparent border-0 ps-2" id="phone"
                             placeholder="Phone Number">
-                        <i class="fa-solid fa-phone"></i>
+                        <i class="fa-solid fa-phone pe-2"></i>
                     </div>
                 </div>
                 <!-- /Input Phone Number -->
@@ -35,23 +37,25 @@ export default {
             <div class="col-md-6">
 
                 <!-- Input Last Name -->
-                <div class="mb-3">
+                <div class="mb-4">
                     <label for="lastname" class="form-label fw-bold pb-1">Last Name</label>
-                    <div class="d-flex justify-content-center align-items-center bg-warning px-2">
-                        <input type="text" class="form-control bg-transparent border-0 ps-0" id="lastname"
+                    <div class="d-flex justify-content-center align-items-center px-2 ms_form
+                    ">
+                        <input type="text" class="form-control bg-transparent border-0 ps-2" id="lastname"
                             placeholder="Last Name">
-                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-user" pe-2></i>
                     </div>
                 </div>
                 <!-- /Input Last Name -->
 
                 <!-- Input Email Address -->
-                <div class="mb-3">
+                <div class="mb-4">
                     <label for="email" class="form-label fw-bold pb-1">Email</label>
-                    <div class="d-flex justify-content-center align-items-center bg-warning px-2">
-                        <input type="text" class="form-control bg-transparent border-0 ps-0" id="email"
+                    <div class="d-flex justify-content-center align-items-center px-2 ms_form
+                    ">
+                        <input type="text" class="form-control bg-transparent border-0 ps-2" id="email"
                             placeholder="Email Address">
-                        <i class="fa-solid fa-envelope"></i>
+                        <i class="fa-solid fa-envelope pe-2"></i>
                     </div>
                 </div>
                 <!-- /Input Email address -->
@@ -63,33 +67,73 @@ export default {
         <div class="row">
             <div class="col">
                 <!-- Input Subject -->
-                <div class="mb-3">
+                <div class="mb-4">
                     <label for="subject" class="form-label fw-bold pb-1 pb-1">Subject</label>
-                    <div class="d-flex justify-content-center align-items-center bg-warning px-2">
-                        <input type="text" class="form-control bg-transparent border-0 ps-0" id="subject"
+                    <div class="d-flex justify-content-center align-items-center px-2 ms_form">
+                        <input type="text" class="form-control bg-transparent border-0 ps-2" id="subject"
                             placeholder="Subject">
-                        <i class="fa-solid fa-file"></i>
+                        <i class="fa-solid fa-file pe-2" pe-2></i>
                     </div>
                 </div>
                 <!-- /Input Subject -->
 
                 <!-- Input Message -->
-                <div class="mb-3">
+                <div class="mb-4">
                     <label for="message" class="form-label fw-bold pb-1">Message</label>
-                    <div class="d-flex justify-content-center align-items-start bg-warning px-2">
-                        <textarea class="form-control bg-transparent border-0 ps-0" id="phone"
-                            placeholder="Your Message" rows="5"></textarea>
-                        <i class="fa-solid fa-pencil pt-2"></i>
+                    <div class="d-flex justify-content-center align-items-start px-2 ms_form">
+                        <textarea class="form-control bg-transparent border-0 ps-2" id="phone"
+                            placeholder="Your Message" rows="7"></textarea>
+                        <i class="fa-solid fa-pencil pe-2 pt-3"></i>
                     </div>
                 </div>
                 <!-- /Input Message -->
 
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
+        <button type="submit" class="btn btn-primary fs-5 fw-semibold p-3 my-4">Send Message</button>
     </form>
 </template>
 
 <style scoped lang="scss">
 @use "../style/partials/variables" as *;
+
+form {
+    background-color: $purple;
+    padding: 2em;
+
+
+    input,
+    textarea {
+        color: #fFF;
+        padding: 1em;
+    }
+
+    input:focus,
+    textarea:focus {
+        color: #FFF;
+        outline: none;
+    }
+
+    label {
+        color: #FFF;
+    }
+
+    button {
+        background-color: $light-green;
+        color: $purple;
+        border: 0;
+
+    }
+
+    .ms_form {
+        background-color: $dark-purple;
+        color: grey;
+
+        input::placeholder,
+        textarea::placeholder {
+            color: grey;
+        }
+
+    }
+}
 </style>

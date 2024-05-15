@@ -15,4 +15,10 @@ export default {
 
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+@use "../style/partials/variables" as *;
+
+* {
+    background-color: $dark-purple;
+}
+</style>

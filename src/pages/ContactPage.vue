@@ -29,37 +29,34 @@ export default {
     <AppHero :page="store" />
     <main>
         <div class="container py-5">
-            <div class="row ">
+            <div class="row g-5">
                 <!-- Colonna di sinistra -->
-                <div class="col-md-4 left-col text-white">
-                    <h2>Get a Quote</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus unde itaque architecto.
-                        Odio
-                        voluptatibus quasi alias magni accusamus adipisci quam!</p>
+                <div class="col-md-4 left-col text-white g-5">
+                    <h2 class="fs-1">Get a Quote</h2>
+                    <p class="pb-4">Curabitur non nulla sit amet nisl tempus coallis quis ac lectus. Vivamus suscipit
+                        tortor eget
+                        felis porttitor volutpat.</p>
                     <!-- Card phone -->
-                    <AppCard :contactCard="store.contacts[1]" :nameCard="phone" />
+                    <!-- <AppCard :contactCard="store.contacts[1]" :nameCard="phone" /> -->
                     <!-- /Card phone -->
 
                     <!-- Card email -->
-                    <AppCard :contactCard="store.contacts[2]" :nameCard="email" />
+                    <!-- <AppCard :contactCard="store.contacts[2]" :nameCard="email" /> -->
                     <!-- /Card email -->
 
                     <!-- Card address -->
-                    <AppCard :contactCard="store.contacts[0]" :nameCard="address" />
+                    <!-- <AppCard :contactCard="store.contacts[0]" :nameCard="address" /> -->
                     <!-- /Card address -->
                 </div>
                 <!-- /Colonna di sinistra -->
 
                 <!-- Colonna di destra -->
-                <div class="col-md-8 right-col bg-secondary">
-                    <div class="container">
-                        <div class="row p-4">
-
-                            <AppForm />
+                <div class="col-md-8 right-col">
 
 
-                        </div>
-                    </div>
+                    <AppForm />
+
+
                 </div>
                 <!-- /Colonna di destra -->
 
