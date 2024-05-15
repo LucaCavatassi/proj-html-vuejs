@@ -117,7 +117,33 @@ export default {
 
                                 <!-- FIGHTERS -->
                                 <div class="col-6">
-                                    ciao
+                                    <div class="cards-container d-flex gap-2">
+                                        <!-- FIGHTER 1 -->
+                                        <div class="card">
+                                            <img :src="getPic(this.portFolio[1].teamImg)" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-sub-title">{{ this.portFolio[1].state }}</h5>
+                                                <h3 class="card-title fw-bold">{{ this.portFolio[1].teamName }}</h3>
+                                            </div>
+                                        </div>
+                                        <!-- /FIGHTER 1 -->
+                                        <!-- VS -->
+                                        <div class="vs-container d-flex justify-content-center align-items-center">
+                                            <div class="vs-badge text-center d-flex align-items-center flex-grow-1 justify-content-center rounded">
+                                                <span class="text-center msgreen fs-2">VS</span>
+                                            </div>
+                                        </div>
+                                        <!-- /VS -->
+                                        <!-- FIGHTER 2 -->
+                                        <div class="card">
+                                            <img :src="getPic(this.portFolio[5].teamImg)" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-sub-title">{{ this.portFolio[5].state }}</h5>
+                                                <h3 class="card-title fw-bold">{{ this.portFolio[5].teamName }}</h3>
+                                            </div>
+                                        </div>
+                                        <!-- /FIGHTER 2 -->
+                                    </div>
                                 </div>
                                 <!-- /FIGHTERS -->
 
@@ -152,7 +178,33 @@ export default {
 
                                 <!-- FIGHTERS -->
                                 <div class="col-6">
-                                    ciao
+                                    <div class="cards-container d-flex gap-2">
+                                        <!-- FIGHTER 1 -->
+                                        <div class="card">
+                                            <img :src="getPic(this.portFolio[4].teamImg)" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-sub-title">{{ this.portFolio[4].state }}</h5>
+                                                <h3 class="card-title fw-bold">{{ this.portFolio[4].teamName }}</h3>
+                                            </div>
+                                        </div>
+                                        <!-- /FIGHTER 1 -->
+                                        <!-- VS -->
+                                        <div class="vs-container d-flex justify-content-center align-items-center">
+                                            <div class="vs-badge text-center d-flex align-items-center flex-grow-1 justify-content-center rounded">
+                                                <span class="text-center msgreen fs-2">VS</span>
+                                            </div>
+                                        </div>
+                                        <!-- /VS -->
+                                        <!-- FIGHTER 2 -->
+                                        <div class="card">
+                                            <img :src="getPic(this.portFolio[2].teamImg)" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-sub-title">{{ this.portFolio[2].state }}</h5>
+                                                <h3 class="card-title fw-bold">{{ this.portFolio[2].teamName }}</h3>
+                                            </div>
+                                        </div>
+                                        <!-- /FIGHTER 2 -->
+                                    </div>
                                 </div>
                                 <!-- /FIGHTERS -->
 
@@ -180,6 +232,190 @@ export default {
                             </div>
                         </div>
                     </div>
+
+                    <div v-if="isPUBG" class="col">
+                        <div class="container">
+                            <div class="row">
+
+                                <!-- FIGHTERS -->
+                                <div class="col-6">
+                                    <div class="cards-container d-flex gap-2">
+                                        <!-- FIGHTER 1 -->
+                                        <div class="card">
+                                            <img :src="getPic(this.portFolio[2].teamImg)" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-sub-title">{{ this.portFolio[2].state }}</h5>
+                                                <h3 class="card-title fw-bold">{{ this.portFolio[2].teamName }}</h3>
+                                            </div>
+                                        </div>
+                                        <!-- /FIGHTER 1 -->
+                                        <!-- VS -->
+                                        <div class="vs-container d-flex justify-content-center align-items-center">
+                                            <div class="vs-badge text-center d-flex align-items-center flex-grow-1 justify-content-center rounded">
+                                                <span class="text-center msgreen fs-2">VS</span>
+                                            </div>
+                                        </div>
+                                        <!-- /VS -->
+                                        <!-- FIGHTER 2 -->
+                                        <div class="card">
+                                            <img :src="getPic(this.portFolio[5].teamImg)" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-sub-title">{{ this.portFolio[5].state }}</h5>
+                                                <h3 class="card-title fw-bold">{{ this.portFolio[5].teamName }}</h3>
+                                            </div>
+                                        </div>
+                                        <!-- /FIGHTER 2 -->
+                                    </div>
+                                </div>
+                                <!-- /FIGHTERS -->
+
+                                <!-- GAME -->
+                                <div class="col-3 d-flex flex-column justify-content-center flex-grow-1">
+                                    <h1 class="fw-bold text-white fs-2">
+                                        {{ this.games[0]}}
+                                    </h1>
+                                    <span class="text-white"> {{ this.description }}</span>
+                                </div>
+                                <!-- /GAME -->
+
+                                <!-- MINIBADGE -->
+                                <div class="col-2 d-flex flex-column justify-content-center align-items-center px-0 py-5 my-5 mx-3 rounded">
+                                    <div class="card-info pt-3 pb-3">
+                                        <h1 class="fw-bold fs-3 mb-0 text-center">9.45</h1>
+                                        <span class="fw-semibold d-block text-center">1st November, 2022</span>
+                                    </div>
+                                    <div class="buttons d-flex gap-2 justify-content-center">
+                                        <button class="card-btn"><i class="fa-brands fa-youtube"></i></button>
+                                        <button class="card-btn"><i class="fa-solid fa-message"></i></button>
+                                    </div>
+                                </div>
+                                <!-- /MINIBADGE -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div v-if="isAC" class="col">
+                        <div class="container">
+                            <div class="row">
+
+                                <!-- FIGHTERS -->
+                                <div class="col-6">
+                                    <div class="cards-container d-flex gap-2">
+                                        <!-- FIGHTER 1 -->
+                                        <div class="card">
+                                            <img :src="getPic(this.portFolio[0].teamImg)" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-sub-title">{{ this.portFolio[0].state }}</h5>
+                                                <h3 class="card-title fw-bold">{{ this.portFolio[0].teamName }}</h3>
+                                            </div>
+                                        </div>
+                                        <!-- /FIGHTER 1 -->
+                                        <!-- VS -->
+                                        <div class="vs-container d-flex justify-content-center align-items-center">
+                                            <div class="vs-badge text-center d-flex align-items-center flex-grow-1 justify-content-center rounded">
+                                                <span class="text-center msgreen fs-2">VS</span>
+                                            </div>
+                                        </div>
+                                        <!-- /VS -->
+                                        <!-- FIGHTER 2 -->
+                                        <div class="card">
+                                            <img :src="getPic(this.portFolio[4].teamImg)" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-sub-title">{{ this.portFolio[4].state }}</h5>
+                                                <h3 class="card-title fw-bold">{{ this.portFolio[4].teamName }}</h3>
+                                            </div>
+                                        </div>
+                                        <!-- /FIGHTER 2 -->
+                                    </div>
+                                </div>
+                                <!-- /FIGHTERS -->
+
+                                <!-- GAME -->
+                                <div class="col-3 d-flex flex-column justify-content-center flex-grow-1">
+                                    <h1 class="fw-bold text-white fs-2">
+                                        {{ this.games[1]}}
+                                    </h1>
+                                    <span class="text-white"> {{ this.description }}</span>
+                                </div>
+                                <!-- /GAME -->
+
+                                <!-- MINIBADGE -->
+                                <div class="col-2 d-flex flex-column justify-content-center align-items-center px-0 py-5 my-5 mx-3 rounded">
+                                    <div class="card-info pt-3 pb-3">
+                                        <h1 class="fw-bold fs-3 mb-0 text-center">9.45</h1>
+                                        <span class="fw-semibold d-block text-center">1st November, 2022</span>
+                                    </div>
+                                    <div class="buttons d-flex gap-2 justify-content-center">
+                                        <button class="card-btn"><i class="fa-brands fa-youtube"></i></button>
+                                        <button class="card-btn"><i class="fa-solid fa-message"></i></button>
+                                    </div>
+                                </div>
+                                <!-- /MINIBADGE -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div v-if="isCD" class="col">
+                        <div class="container">
+                            <div class="row">
+
+                                <!-- FIGHTERS -->
+                                <div class="col-6">
+                                    <div class="cards-container d-flex gap-2">
+                                        <!-- FIGHTER 1 -->
+                                        <div class="card">
+                                            <img :src="getPic(this.portFolio[3].teamImg)" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-sub-title">{{ this.portFolio[3].state }}</h5>
+                                                <h3 class="card-title fw-bold">{{ this.portFolio[3].teamName }}</h3>
+                                            </div>
+                                        </div>
+                                        <!-- /FIGHTER 1 -->
+                                        <!-- VS -->
+                                        <div class="vs-container d-flex justify-content-center align-items-center">
+                                            <div class="vs-badge text-center d-flex align-items-center flex-grow-1 justify-content-center rounded">
+                                                <span class="text-center msgreen fs-2">VS</span>
+                                            </div>
+                                        </div>
+                                        <!-- /VS -->
+                                        <!-- FIGHTER 2 -->
+                                        <div class="card">
+                                            <img :src="getPic(this.portFolio[0].teamImg)" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-sub-title">{{ this.portFolio[0].state }}</h5>
+                                                <h3 class="card-title fw-bold">{{ this.portFolio[0].teamName }}</h3>
+                                            </div>
+                                        </div>
+                                        <!-- /FIGHTER 2 -->
+                                    </div>
+                                </div>
+                                <!-- /FIGHTERS -->
+
+                                <!-- GAME -->
+                                <div class="col-3 d-flex flex-column justify-content-center flex-grow-1">
+                                    <h1 class="fw-bold text-white fs-2">
+                                        {{ this.games[2]}}
+                                    </h1>
+                                    <span class="text-white"> {{ this.description }}</span>
+                                </div>
+                                <!-- /GAME -->
+
+                                <!-- MINIBADGE -->
+                                <div class="col-2 d-flex flex-column justify-content-center align-items-center px-0 py-5 my-5 mx-3 rounded">
+                                    <div class="card-info pt-3 pb-3">
+                                        <h1 class="fw-bold fs-3 mb-0 text-center">9.45</h1>
+                                        <span class="fw-semibold d-block text-center">1st November, 2022</span>
+                                    </div>
+                                    <div class="buttons d-flex gap-2 justify-content-center">
+                                        <button class="card-btn"><i class="fa-brands fa-youtube"></i></button>
+                                        <button class="card-btn"><i class="fa-solid fa-message"></i></button>
+                                    </div>
+                                </div>
+                                <!-- /MINIBADGE -->
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
     </div>
@@ -250,6 +486,41 @@ export default {
 
 .col-2 {
     background-color: $dark-purple;
+}
+
+.cards-container {
+    padding: 40px 0;
+}
+
+.card {
+    border: hidden;
+    width: calc(100% / 3);
+}
+
+.vs-container{
+    width: calc(100% / 3);
+}
+.vs-badge {
+    height: 50%;
+    padding: 30px 0;
+    background-color: $dark-purple;
+    
+}
+
+.card-img-top {
+    background-color: $dark-purple;
+    padding: 20px
+}
+
+.card-body {
+    background-color: $light-violet;
+    .card-sub-title {
+        color: $green;
+        font-size: .9rem
+    }
+    .card-title{
+        color: white;
+    }
 }
 
 </style>
