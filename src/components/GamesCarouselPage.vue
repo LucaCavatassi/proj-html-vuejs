@@ -7,6 +7,7 @@ export default {
     },
     data (){
         return{
+            start: "",
             isShown: true,
             cards_pos: 0,
             portFolio: [
@@ -57,10 +58,18 @@ export default {
         next() {
             this.cards_pos = (this.cards_pos + 1) % this.portFolio.length;
         },
+
+        stopInterval () {
+            clearInterval(this.start)
+            return this.start = null
+        },
+        startInterval () {
+            return this.start = setInterval(this.next,2500);
+        }
     },
 
     mounted(){
-        setInterval(this.next,2500);
+        this.start = setInterval(this.next,2500);
     },
 }
 </script>
@@ -103,7 +112,7 @@ export default {
 
             <!-- MAIN CARDS -->
             <div class="row mt-5 justify-content-center">
-                <div class="col" v-for="element in cardsToDisplay">
+                <div class="col"  @mouseenter="stopInterval" @mouseleave="startInterval" v-for="element in cardsToDisplay">
 
                     <!-- IMG -->
                     <div class="card">

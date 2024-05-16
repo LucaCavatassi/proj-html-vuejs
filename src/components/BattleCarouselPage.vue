@@ -7,6 +7,7 @@ export default {
     },
     data (){
         return{
+            start: "",
             imgUrl: "../src/assets/img/match-bg.png",
             cards_pos: 0,
             portFolio: [
@@ -57,10 +58,18 @@ export default {
         next() {
             this.cards_pos = (this.cards_pos + 1) % this.portFolio.length;
         },
+
+        stopInterval () {
+            clearInterval(this.start)
+            return this.start = null
+        },
+        startInterval () {
+            return this.start = setInterval(this.next,2500);
+        }
     },
 
     mounted(){
-        setInterval(this.next,2500);
+        this.start = setInterval(this.next,2500);
     },
 }
 </script>
@@ -103,11 +112,14 @@ export default {
 
             <!-- MAIN CARDS -->
             <div class="row mt-5 justify-content-center">
-                <div class="col-4" v-for="element in cardsToDisplay">
+                <div class="col-4"@mouseenter="stopInterval" @mouseleave="startInterval" v-for="element in cardsToDisplay">
                     <!-- INFO -->
                     <div class="ms-card-body">
                         <div class="card pb-4">
-                            <img :src="getPic(element.teamImg)" class="card-img-top mt-4 m-auto" alt="...">
+                            <div class="img-cont mt-4 m-auto">
+                                <img :src="getPic(element.teamImg)" class="card-img-top position-absolute back-img" alt="...">
+                                <img :src="getPic(element.teamImg)" class="card-img-top top-img" alt="...">
+                            </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title">{{ element.name }}</h5>
                                 <div class="buttons d-flex gap-2 justify-content-center">
@@ -192,10 +204,24 @@ export default {
             min-width: 250px;
             aspect-ratio: 1;
         }
-        .card-img-top{
+        .img-cont{
             background-color: $dark-purple;
+            width: 90%;
+            position: relative;
+            z-index: 3;
             border-radius: 10px;
-            padding: 60px;
+            display: flex;
+            justify-content: center;
+            
+            .top-img{
+                padding: 60px;
+            }
+            .back-img {
+                top: 0;
+                right: 0;
+                padding: 10px;
+                opacity: 0.1;
+            }
         }
 
         .card-body {

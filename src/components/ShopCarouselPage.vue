@@ -2,6 +2,7 @@
 export default {
     data (){
         return{
+            start: "",
             imgUrl: "../src/assets/img/shop-bg.png",
             isShown: false,
             cards_pos: 0,
@@ -57,10 +58,18 @@ export default {
         next() {
             this.cards_pos = (this.cards_pos + 1) % this.portFolio.length;
         },
+
+        stopInterval () {
+            clearInterval(this.start)
+            return this.start = null
+        },
+        startInterval () {
+            return this.start = setInterval(this.next,2500);
+        }
     },
 
     mounted(){
-        setInterval(this.next,2500);
+        this.start = setInterval(this.next,2500);
     },
 }
 </script>
@@ -103,7 +112,7 @@ export default {
 
             <!-- MAIN CARDS -->
             <div class="row mt-5 pb-5 justify-content-center">
-                <div class="col-3" v-for="element in cardsToDisplay">
+                <div class="col-3" @mouseenter="stopInterval" @mouseleave="startInterval" v-for="element in cardsToDisplay">
 
                     <!-- IMG -->
                     <div class="img-cont mb-2 d-flex justify-content-center">
