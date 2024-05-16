@@ -98,6 +98,9 @@ export default {
         .ms-card{
             @include flex(column, center, center);
         }
+        .ms-card:hover{
+            background-color: $light-green;
+        }
     }
 }
 
