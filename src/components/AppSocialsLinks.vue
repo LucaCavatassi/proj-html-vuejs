@@ -1,31 +1,41 @@
 <script>
 export default {
-
+    data() {
+        return {
+            socials: [
+                {
+                    name: "Facebook",
+                    link: "#",
+                    icon: "fa-facebook",
+                },
+                {
+                    name: "Twitter",
+                    link: "#",
+                    icon: "fa-twitter",
+                },
+                {
+                    name: "Instagram",
+                    link: "#",
+                    icon: "fa-instagram",
+                },
+                {
+                    name: "Linkedin",
+                    link: "#",
+                    icon: "fa-linkedin",
+                },
+            ],
+        }
+    },
 }
 </script>
 
 <template>
     <div class="socials-icons">
-        <!-- Link Facebook -->
-        <span class="rounded-circle">
-            <a href="#" class="text-white"><i class="fa-brands fa-facebook"></i></a>
-        </span class="rounded-circle">
-        <!-- /Link Facebook -->
-        <!-- Link Twitter -->
-        <span class="rounded-circle">
-            <a href="#" class="text-white"><i class="fa-brands fa-twitter"></i></a>
-        </span class="rounded-circle">
-        <!-- /Link Twitter -->
-        <!-- Link Instagram -->
-        <span class="rounded-circle">
-            <a href="#" class="text-white"><i class="fa-brands fa-instagram"></i></a>
-        </span class="rounded-circle">
-        <!-- /Link Instagram -->
-        <!-- Link Linkedin -->
-        <span class="rounded-circle">
-            <a href="#" class="text-white"><i class="fa-brands fa-linkedin"></i></a>
-        </span class="rounded-circle">
-        <!-- /Link Linkedin -->
+
+        <span class="rounded-circle" v-for="curElem in socials">
+            <a :href="`${curElem.link}`" class="text-white"><i class="fa-brands" :class="curElem.icon"></i></a>
+        </span>
+
     </div>
 
 </template>
