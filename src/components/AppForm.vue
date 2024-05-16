@@ -1,6 +1,10 @@
 <script>
 export default {
-
+    data() {
+        return {
+            isClicked: false,
+        }
+    }
 }
 </script>
 
@@ -14,8 +18,7 @@ export default {
                         Name</label>
                     <div class="d-flex justify-content-center align-items-center px-2 ms_form 
                     ">
-                        <input type="text" class="form-control bg-transparent border-0 ps-2" id="firstname"
-                            placeholder="First Name">
+                        <input type="text" class="form-control border-0 ps-2" id="firstname" placeholder="First Name">
                         <i class="fa-solid fa-user pe-2"></i>
                     </div>
                 </div>
@@ -26,8 +29,7 @@ export default {
                     <label for="phone" class="form-label fw-bold pb-1">Phone</label>
                     <div class="d-flex justify-content-center align-items-center px-2 ms_form
                     ">
-                        <input type="text" class="form-control bg-transparent border-0 ps-2" id="phone"
-                            placeholder="Phone Number">
+                        <input type="text" class="form-control border-0 ps-2" id="phone" placeholder="Phone Number">
                         <i class="fa-solid fa-phone pe-2"></i>
                     </div>
                 </div>
@@ -41,9 +43,8 @@ export default {
                     <label for="lastname" class="form-label fw-bold pb-1">Last Name</label>
                     <div class="d-flex justify-content-center align-items-center px-2 ms_form
                     ">
-                        <input type="text" class="form-control bg-transparent border-0 ps-2" id="lastname"
-                            placeholder="Last Name">
-                        <i class="fa-solid fa-user" pe-2></i>
+                        <input type="text" class="form-control border-0 ps-2" id="lastname" placeholder="Last Name">
+                        <i class="fa-solid fa-user pe-2"></i>
                     </div>
                 </div>
                 <!-- /Input Last Name -->
@@ -53,8 +54,7 @@ export default {
                     <label for="email" class="form-label fw-bold pb-1">Email</label>
                     <div class="d-flex justify-content-center align-items-center px-2 ms_form
                     ">
-                        <input type="text" class="form-control bg-transparent border-0 ps-2" id="email"
-                            placeholder="Email Address">
+                        <input type="text" class="form-control border-0 ps-2" id="email" placeholder="Email Address">
                         <i class="fa-solid fa-envelope pe-2"></i>
                     </div>
                 </div>
@@ -70,8 +70,7 @@ export default {
                 <div class="mb-4">
                     <label for="subject" class="form-label fw-bold pb-1 pb-1">Subject</label>
                     <div class="d-flex justify-content-center align-items-center px-2 ms_form">
-                        <input type="text" class="form-control bg-transparent border-0 ps-2" id="subject"
-                            placeholder="Subject">
+                        <input type="text" class="form-control border-0 ps-2" id="subject" placeholder="Subject">
                         <i class="fa-solid fa-file pe-2" pe-2></i>
                     </div>
                 </div>
@@ -81,8 +80,8 @@ export default {
                 <div class="mb-4 message-box">
                     <label for="message" class="form-label fw-bold pb-1">Message</label>
                     <div class="d-flex justify-content-center align-items-start ps-2 ms_form">
-                        <textarea class="form-control bg-transparent border-0 ps-2" id="phone"
-                            placeholder="Your Message" rows="7"></textarea>
+                        <textarea class="form-control border-0 ps-2" id="phone" placeholder="Your Message"
+                            rows="7"></textarea>
                         <i class="fa-solid fa-pencil pe-2 pt-3 inner-icon"></i>
                     </div>
                 </div>
@@ -90,7 +89,10 @@ export default {
 
             </div>
         </div>
-        <button type="submit" class="btn btn-primary fs-5 fw-semibold p-3 my-4">Send Message</button>
+        <button type="submit" class="btn btn-primary fs-5 fw-semibold p-3 my-4" @click.prevent="isClicked = true">Send
+            Message</button>
+        <div :class="isClicked ? 'd-block' : 'd-none'" class="text-white">Thank You! Your message has been sent.</div>
+
     </form>
 </template>
 
@@ -101,18 +103,22 @@ form {
     background-color: $purple;
     padding: 2em;
 
-
     input,
     textarea {
         color: #fFF;
         padding: 1em;
+        background-color: transparent;
+
     }
 
     input:focus,
     textarea:focus {
         color: #FFF;
+        background-color: transparent;
         outline: none;
+        box-shadow: none;
     }
+
 
     label {
         color: #FFF;
@@ -123,6 +129,14 @@ form {
         color: $purple;
         border: 0;
 
+        &:focus,
+        &:active,
+        &:hover {
+            background-color: $light-green !important;
+            color: $purple !important;
+            outline: none !important;
+            box-shadow: none !important;
+        }
     }
 
     .ms_form {
