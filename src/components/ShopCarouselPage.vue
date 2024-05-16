@@ -2,6 +2,7 @@
 export default {
     data (){
         return{
+            activeIndex: 0,
             start: "",
             imgUrl: "../src/assets/img/shop-bg.png",
             isShown: false,
@@ -12,7 +13,8 @@ export default {
                     img: "s1",
                     score: "",
                     originalPrice: 599,
-                    discountedPrice: 399
+                    discountedPrice: 399,
+                    moreImg: ["more1", "more2"]
                 },
 
                 {
@@ -28,7 +30,8 @@ export default {
                     img: "s3",
                     score: "",
                     originalPrice: 599,
-                    discountedPrice: 399
+                    discountedPrice: 399,
+                    moreImg: ["morevr2"]
                 },
 
                 {
@@ -112,13 +115,15 @@ export default {
 
             <!-- MAIN CARDS -->
             <div class="row mt-5 pb-5 justify-content-center">
-                <div class="col-3" @mouseenter="stopInterval" @mouseleave="startInterval" v-for="element in cardsToDisplay">
+                <div class="col-3" @mouseenter="stopInterval" @mouseleave="startInterval"
+                    v-for="(element, index) in cardsToDisplay">
 
                     <!-- IMG -->
                     <div class="img-cont mb-2 d-flex justify-content-center">
                         <img :src="getPic(element.img)" :alt="element">
                         <div class="buttons">
-                            <button class="card-btn m-1" @click="isShown === true"><i class="fa-solid fa-eye"></i></button>
+                            <button class="card-btn m-1" @click="activeIndex = index" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><i class="fa-solid fa-eye"></i></button>
                             <button class="card-btn m-1"><i class="fa-solid fa-cart-flatbed"></i></button>
                             <button class="card-btn m-1"><i class="fa-solid fa-heart"></i></button>
                         </div>
@@ -128,7 +133,7 @@ export default {
                     <!-- INFO -->
                     <div class="row align-items-center">
                         <div class="col">
-                            <div class="txt-cont"> 
+                            <div class="txt-cont">
                                 <div class="stars mt-3">
                                     <i class="fa-solid fa-star-half-stroke fs-5 ms-green"></i>
                                     <i class="fa-solid fa-star-half-stroke fs-5 ms-green"></i>
@@ -150,6 +155,20 @@ export default {
             <!-- /MAIN CARDS-->
         </div>
     </div>
+
+
+    <!-- MODAL IMG -->
+    <div class="modal modal-lg fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body m-auto">
+                    <img style="width: 150%;" :src="getPic(portFolio[this.activeIndex].img)">
+                </div>
+            </div>
+        </div>
+    </div>
+
 </template>
 
 <style scoped lang="scss">
@@ -257,6 +276,8 @@ export default {
         .original-price {
             text-decoration: line-through;
         }
+
+    // MODAL 
 }
 
 </style>
