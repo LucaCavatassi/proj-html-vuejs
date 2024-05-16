@@ -14,7 +14,7 @@ export default {
 
             portFolio: [
                 {
-                    teamName: "Ninja Warrior Gaming",
+                    teamName: "Ninja Gaming",
                     teamImg: "1",
                     state: "Italia"
                 },
@@ -116,12 +116,12 @@ export default {
                             <div class="row">
 
                                 <!-- FIGHTERS -->
-                                <div class="col-6">
-                                    <div class="cards-container d-flex gap-2">
+                                <div class="col-6 d-flex align-items-center">
+                                    <div class="cards-container d-flex gap-2 flex-grow-1">
                                         <!-- FIGHTER 1 -->
-                                        <div class="card">
+                                        <div class="ms-card d-flex flex-column">
                                             <img :src="getPic(this.portFolio[1].teamImg)" class="card-img-top" alt="...">
-                                            <div class="card-body">
+                                            <div class="card-body p-2" >
                                                 <h5 class="card-sub-title">{{ this.portFolio[1].state }}</h5>
                                                 <h3 class="card-title fw-bold">{{ this.portFolio[1].teamName }}</h3>
                                             </div>
@@ -135,9 +135,9 @@ export default {
                                         </div>
                                         <!-- /VS -->
                                         <!-- FIGHTER 2 -->
-                                        <div class="card">
+                                        <div class="ms-card d-flex flex-column">
                                             <img :src="getPic(this.portFolio[5].teamImg)" class="card-img-top" alt="...">
-                                            <div class="card-body">
+                                            <div class="card-body p-2">
                                                 <h5 class="card-sub-title">{{ this.portFolio[5].state }}</h5>
                                                 <h3 class="card-title fw-bold">{{ this.portFolio[5].teamName }}</h3>
                                             </div>
@@ -177,12 +177,12 @@ export default {
                             <div class="row">
 
                                 <!-- FIGHTERS -->
-                                <div class="col-6">
-                                    <div class="cards-container d-flex gap-2">
+                                <div class="col-6 d-flex align-items-center">
+                                    <div class="cards-container d-flex gap-2 flex-grow-1">
                                         <!-- FIGHTER 1 -->
-                                        <div class="card">
+                                        <div class="ms-card d-flex flex-column">
                                             <img :src="getPic(this.portFolio[4].teamImg)" class="card-img-top" alt="...">
-                                            <div class="card-body">
+                                            <div class="card-body p-2">
                                                 <h5 class="card-sub-title">{{ this.portFolio[4].state }}</h5>
                                                 <h3 class="card-title fw-bold">{{ this.portFolio[4].teamName }}</h3>
                                             </div>
@@ -196,9 +196,9 @@ export default {
                                         </div>
                                         <!-- /VS -->
                                         <!-- FIGHTER 2 -->
-                                        <div class="card">
+                                        <div class="ms-card d-flex flex-column">
                                             <img :src="getPic(this.portFolio[2].teamImg)" class="card-img-top" alt="...">
-                                            <div class="card-body">
+                                            <div class="card-body p-2">
                                                 <h5 class="card-sub-title">{{ this.portFolio[2].state }}</h5>
                                                 <h3 class="card-title fw-bold">{{ this.portFolio[2].teamName }}</h3>
                                             </div>
@@ -238,12 +238,12 @@ export default {
                             <div class="row">
 
                                 <!-- FIGHTERS -->
-                                <div class="col-6">
-                                    <div class="cards-container d-flex gap-2">
+                                <div class="col-6 d-flex align-items-center">
+                                    <div class="cards-container d-flex gap-2 flex-grow-1">
                                         <!-- FIGHTER 1 -->
-                                        <div class="card">
+                                        <div class="ms-card d-flex flex-column">
                                             <img :src="getPic(this.portFolio[2].teamImg)" class="card-img-top" alt="...">
-                                            <div class="card-body">
+                                            <div class="card-body p-2">
                                                 <h5 class="card-sub-title">{{ this.portFolio[2].state }}</h5>
                                                 <h3 class="card-title fw-bold">{{ this.portFolio[2].teamName }}</h3>
                                             </div>
@@ -257,9 +257,9 @@ export default {
                                         </div>
                                         <!-- /VS -->
                                         <!-- FIGHTER 2 -->
-                                        <div class="card">
+                                        <div class="ms-card d-flex flex-column">
                                             <img :src="getPic(this.portFolio[5].teamImg)" class="card-img-top" alt="...">
-                                            <div class="card-body">
+                                            <div class="card-body p-2">
                                                 <h5 class="card-sub-title">{{ this.portFolio[5].state }}</h5>
                                                 <h3 class="card-title fw-bold">{{ this.portFolio[5].teamName }}</h3>
                                             </div>
@@ -299,12 +299,12 @@ export default {
                             <div class="row">
 
                                 <!-- FIGHTERS -->
-                                <div class="col-6">
-                                    <div class="cards-container d-flex gap-2">
+                                <div class="col-6 d-flex align-items-center">
+                                    <div class="cards-container d-flex gap-2 flex-grow-1">
                                         <!-- FIGHTER 1 -->
-                                        <div class="card">
+                                        <div class="ms-card d-flex flex-column">
                                             <img :src="getPic(this.portFolio[0].teamImg)" class="card-img-top" alt="...">
-                                            <div class="card-body">
+                                            <div class="card-body p-2">
                                                 <h5 class="card-sub-title">{{ this.portFolio[0].state }}</h5>
                                                 <h3 class="card-title fw-bold">{{ this.portFolio[0].teamName }}</h3>
                                             </div>
@@ -318,9 +318,9 @@ export default {
                                         </div>
                                         <!-- /VS -->
                                         <!-- FIGHTER 2 -->
-                                        <div class="card">
-                                            <img :src="getPic(this.portFolio[4].teamImg)" class="card-img-top" alt="...">
-                                            <div class="card-body">
+                                        <div class="ms-card d-flex flex-column">
+                                            <img :src="getPic(this.portFolio[4].teamImg)" class="card-img-top flex-grow-1" alt="...">
+                                            <div class="card-body p-2">
                                                 <h5 class="card-sub-title">{{ this.portFolio[4].state }}</h5>
                                                 <h3 class="card-title fw-bold">{{ this.portFolio[4].teamName }}</h3>
                                             </div>
@@ -360,12 +360,12 @@ export default {
                             <div class="row">
 
                                 <!-- FIGHTERS -->
-                                <div class="col-6">
-                                    <div class="cards-container d-flex gap-2">
+                                <div class="col-6 d-flex align-items-center">
+                                    <div class="cards-container d-flex gap-2 flex-grow-1">
                                         <!-- FIGHTER 1 -->
-                                        <div class="card">
+                                        <div class="ms-card d-flex flex-column">
                                             <img :src="getPic(this.portFolio[3].teamImg)" class="card-img-top" alt="...">
-                                            <div class="card-body">
+                                            <div class="card-body p-2">
                                                 <h5 class="card-sub-title">{{ this.portFolio[3].state }}</h5>
                                                 <h3 class="card-title fw-bold">{{ this.portFolio[3].teamName }}</h3>
                                             </div>
@@ -379,9 +379,9 @@ export default {
                                         </div>
                                         <!-- /VS -->
                                         <!-- FIGHTER 2 -->
-                                        <div class="card">
+                                        <div class="ms-card d-flex flex-column">
                                             <img :src="getPic(this.portFolio[0].teamImg)" class="card-img-top" alt="...">
-                                            <div class="card-body">
+                                            <div class="card-body p-2">
                                                 <h5 class="card-sub-title">{{ this.portFolio[0].state }}</h5>
                                                 <h3 class="card-title fw-bold">{{ this.portFolio[0].teamName }}</h3>
                                             </div>
@@ -425,10 +425,17 @@ export default {
 <style scoped lang="scss">
 @use "../style/partials/variables" as *;
 
+// CUSTOM
 .msgreen{
         color: $green!important
     }
 
+.ms-card {
+    width: calc(100% / 3);
+    height: 100%;
+}
+
+// CUSTOM BTN
 .card-btn {
     height: 40px;
     width: 40px;
@@ -437,10 +444,25 @@ export default {
     background-color: $light-green;
 }
 
+// CONTAINER
 .container-fluid {
     background-color: $dark-purple
 }
 
+// COLS
+.col {
+    margin: 20px;
+    color: white;
+    background-color: $purple;
+    border: 1px solid $light-green;
+    border-radius: 15px
+}
+
+.col-2 {
+    background-color: $dark-purple;
+}
+
+// FILTERS
 .filter-buttons {
     button{
         background: transparent;
@@ -452,14 +474,6 @@ export default {
     button:hover {
         cursor: pointer;
     }
-}
-
-.col {
-    margin: 20px;
-    color: white;
-    background-color: $purple;
-    border: 1px solid $light-green;
-    border-radius: 15px
 }
 
 // HOVER
@@ -474,6 +488,7 @@ export default {
     color: white
 }
 
+// TEXT
 .text-center{
     h1 {
         font-size: 3rem;
@@ -484,19 +499,36 @@ export default {
     }
 }
 
-.col-2 {
-    background-color: $dark-purple;
-}
-
+// ALL-CARDS 
 .cards-container {
     padding: 40px 0;
 }
 
-.card {
-    border: hidden;
-    width: calc(100% / 3);
+// CARD IMG
+.card-img-top {
+    background-color: $dark-purple;
+    padding: 20px;
+    aspect-ratio: 1;
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+}
+// CARD TEXT
+.card-body {
+    background-color: $light-violet;
+    height: calc(20%);
+    .card-sub-title {
+        color: $green;
+        font-size: .9rem
+    }
+    .card-title{
+        color: white;
+
+    }
 }
 
+// VS
 .vs-container{
     width: calc(100% / 3);
 }
@@ -505,22 +537,6 @@ export default {
     padding: 30px 0;
     background-color: $dark-purple;
     
-}
-
-.card-img-top {
-    background-color: $dark-purple;
-    padding: 20px
-}
-
-.card-body {
-    background-color: $light-violet;
-    .card-sub-title {
-        color: $green;
-        font-size: .9rem
-    }
-    .card-title{
-        color: white;
-    }
 }
 
 </style>
