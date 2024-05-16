@@ -92,7 +92,6 @@ export default {
         <button type="submit" class="btn btn-primary fs-5 fw-semibold p-3 my-4" @click.prevent="isClicked = true">Send
             Message</button>
         <div :class="isClicked ? 'd-block' : 'd-none'" class="text-white">Thank You! Your message has been sent.</div>
-
     </form>
 </template>
 
