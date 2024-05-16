@@ -3,7 +3,7 @@ import Hero from "../components/Hero.vue"
 import GamesCarouselPage from "../components/GamesCarouselPage.vue"
 import BattleCarouselPage from "../components/BattleCarouselPage.vue"
 import ShopCarouselPage from "../components/ShopCarouselPage.vue"
-import UpcomingMatchPage from "../components/UpcomingMatchPage.vue"
+import UpcomingMatchRefactor from "../components/UpcomingMatchRefactor.vue"
 
 
 export default {
@@ -13,7 +13,7 @@ export default {
         GamesCarouselPage, 
         BattleCarouselPage,
         ShopCarouselPage,
-        UpcomingMatchPage
+        UpcomingMatchRefactor
     },
     data (){
         return{
@@ -25,7 +25,7 @@ export default {
 <template>
     <Hero />
     <GamesCarouselPage title="Choose Who's The Best In The World!" subTitle="Trending Games" />
-    <UpcomingMatchPage title="Upcoming Match" subTitle="Trending Battle"/>
+    <UpcomingMatchRefactor title="Upcoming Match" subTitle="Trending Battle"/>
     <BattleCarouselPage title="Keep Eyes & Manage upcoming Battle" subTitle="Upcoming Match" />
     <ShopCarouselPage title="Explore Our Shop" subTitle="Gamer Shop" />
 </template>
