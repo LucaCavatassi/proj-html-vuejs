@@ -165,6 +165,7 @@ export default {
         showAll () {
             this.filteredArray = [];
             this.isAll = true;
+            
             console.log(this.filteredArray);
         }
     }
