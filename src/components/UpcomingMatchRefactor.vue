@@ -9,13 +9,17 @@ export default {
             isAll: true,
             isFilter: false,
 
+            isPUBG: false,
+            isCOD: false,
+            isAC: false,
+            isMCX: false,
+
             description: "Nulla porttitor accumsan tincidunt. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus magna justo.",
 
             filteredArray: [],
 
             portFolioMatches: [
                 {
-                    isPUBG: false,
                     game: "PUBG Battlegrounds",
 
                     teamOneName: "Ninja Gaming",
@@ -28,7 +32,6 @@ export default {
                 },
 
                 {
-                    isPUBG: false,
                     
                     game: "PUBG Battlegrounds",
 
@@ -42,7 +45,6 @@ export default {
                 },
 
                 {
-                    isCD: false,
 
                     game: "Call Of Duty",
 
@@ -88,6 +90,12 @@ export default {
         },
 
         pubgFilter () {
+            // FLAG PER TEXT
+            this.isPUBG = true,
+            this.isCOD = false,
+            this.isAC = false,
+            this.isMCX = false,
+
             this.filteredArray = [];
             this.portFolioMatches.forEach((element) => {
                 if (element.game === "PUBG Battlegrounds") {
@@ -100,6 +108,13 @@ export default {
         },
 
         acFilter () {
+            // FLAG PER TEXT
+            this.isPUBG = false,
+            this.isCOD = false,
+            this.isAC = true,
+            this.isMCX = false,
+
+
             this.filteredArray = [];
             this.portFolioMatches.forEach((element) => {
                 if (element.game === "Assassin's Creed") {
@@ -112,6 +127,12 @@ export default {
         },
 
         codFilter () {
+            // FLAG PER TEXT
+            this.isPUBG = false,
+            this.isCOD = true,
+            this.isAC = false,
+            this.isMCX = false,
+
             this.filteredArray = [];
             this.portFolioMatches.forEach((element) => {
                 if (element.game === "Call Of Duty") {
@@ -124,6 +145,12 @@ export default {
         },
 
         mcxFilter () {
+            // FLAG PER TEXT
+            this.isPUBG = false,
+            this.isCOD = false,
+            this.isAC = false,
+            this.isMCX = true,
+
             this.filteredArray = [];
             this.portFolioMatches.forEach((element) => {
                 if (element.game === "Mortal Combat X") {
@@ -152,12 +179,12 @@ export default {
                         <span class="msgreen">{{ subTitle }}</span>
                         <h1 class="text-white">{{ title }}</h1>
                     </div>
-                    <div class="filter-buttons p-3 d-flex justify-content-center gap-2">
-                        <button @click="showAll">ALL</button>
-                        <button @click="pubgFilter">PUBG</button>
-                        <button @click="codFilter">COD</button>
-                        <button @click="acFilter">AC</button>
-                        <button @click="mcxFilter">MCX</button>
+                    <div class="filter-buttons p-3 d-flex justify-content-center gap-2" >
+                        <button @click="showAll" :class="{ 'msgreen' : this.isAll }">ALL</button>
+                        <button @click="pubgFilter" :class="{ 'msgreen' : this.isPUBG }">PUBG</button>
+                        <button @click="codFilter" :class="{ 'msgreen' : this.isCOD }">COD</button>
+                        <button @click="acFilter" :class="{ 'msgreen' : this.isAC }">AC</button>
+                        <button @click="mcxFilter" :class="{ 'msgreen' : this.isMCX }">MCX</button>
                     </div>
 
                     <!-- ALL -->
