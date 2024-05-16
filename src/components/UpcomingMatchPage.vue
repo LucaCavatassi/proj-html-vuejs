@@ -157,14 +157,16 @@ export default {
                                 <!-- /GAME -->
 
                                 <!-- MINIBADGE -->
-                                <div class="col-2 d-flex flex-column justify-content-center align-items-center px-0 py-5 my-5 mx-3 rounded">
-                                    <div class="card-info pt-3 pb-3">
-                                        <h1 class="fw-bold fs-3 mb-0 text-center">9.45</h1>
-                                        <span class="fw-semibold d-block text-center">1st November, 2022</span>
-                                    </div>
-                                    <div class="buttons d-flex gap-2 justify-content-center">
-                                        <button class="card-btn"><i class="fa-brands fa-youtube"></i></button>
-                                        <button class="card-btn"><i class="fa-solid fa-message"></i></button>
+                                <div class="col-2 d-flex align-items-center">
+                                    <div class="container-mini d-flex flex-column justify-content-center align-items-center px-0 my-5 mx-3 rounded">
+                                        <div class="card-info pt-3 pb-3">
+                                            <h1 class="fw-bold fs-3 mb-0 text-center">9.45</h1>
+                                            <span class="fw-semibold d-block text-center">1st November, 2022</span>
+                                        </div>
+                                        <div class="buttons d-flex gap-2 justify-content-center">
+                                            <button class="card-btn"><i class="fa-brands fa-youtube"></i></button>
+                                            <button class="card-btn"><i class="fa-solid fa-message"></i></button>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- /MINIBADGE -->
@@ -218,14 +220,16 @@ export default {
                                 <!-- /GAME -->
 
                                 <!-- MINIBADGE -->
-                                <div class="col-2 d-flex flex-column justify-content-center align-items-center px-0 py-5 my-5 mx-3 rounded">
-                                    <div class="card-info pt-3 pb-3">
-                                        <h1 class="fw-bold fs-3 mb-0 text-center">9.45</h1>
-                                        <span class="fw-semibold d-block text-center">1st November, 2022</span>
-                                    </div>
-                                    <div class="buttons d-flex gap-2 justify-content-center">
-                                        <button class="card-btn"><i class="fa-brands fa-youtube"></i></button>
-                                        <button class="card-btn"><i class="fa-solid fa-message"></i></button>
+                                <div class="col-2 d-flex align-items-center">
+                                    <div class="container-mini d-flex flex-column justify-content-center align-items-center px-0 my-5 mx-3 rounded">
+                                        <div class="card-info pt-3 pb-3">
+                                            <h1 class="fw-bold fs-3 mb-0 text-center">9.45</h1>
+                                            <span class="fw-semibold d-block text-center">1st November, 2022</span>
+                                        </div>
+                                        <div class="buttons d-flex gap-2 justify-content-center">
+                                            <button class="card-btn"><i class="fa-brands fa-youtube"></i></button>
+                                            <button class="card-btn"><i class="fa-solid fa-message"></i></button>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- /MINIBADGE -->
@@ -279,14 +283,16 @@ export default {
                                 <!-- /GAME -->
 
                                 <!-- MINIBADGE -->
-                                <div class="col-2 d-flex flex-column justify-content-center align-items-center px-0 py-5 my-5 mx-3 rounded">
-                                    <div class="card-info pt-3 pb-3">
-                                        <h1 class="fw-bold fs-3 mb-0 text-center">9.45</h1>
-                                        <span class="fw-semibold d-block text-center">1st November, 2022</span>
-                                    </div>
-                                    <div class="buttons d-flex gap-2 justify-content-center">
-                                        <button class="card-btn"><i class="fa-brands fa-youtube"></i></button>
-                                        <button class="card-btn"><i class="fa-solid fa-message"></i></button>
+                                <div class="col-2 d-flex align-items-center">
+                                    <div class="container-mini d-flex flex-column justify-content-center align-items-center px-0 my-5 mx-3 rounded">
+                                        <div class="card-info pt-3 pb-3">
+                                            <h1 class="fw-bold fs-3 mb-0 text-center">9.45</h1>
+                                            <span class="fw-semibold d-block text-center">1st November, 2022</span>
+                                        </div>
+                                        <div class="buttons d-flex gap-2 justify-content-center">
+                                            <button class="card-btn"><i class="fa-brands fa-youtube"></i></button>
+                                            <button class="card-btn"><i class="fa-solid fa-message"></i></button>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- /MINIBADGE -->
@@ -340,14 +346,16 @@ export default {
                                 <!-- /GAME -->
 
                                 <!-- MINIBADGE -->
-                                <div class="col-2 d-flex flex-column justify-content-center align-items-center px-0 py-5 my-5 mx-3 rounded">
-                                    <div class="card-info pt-3 pb-3">
-                                        <h1 class="fw-bold fs-3 mb-0 text-center">9.45</h1>
-                                        <span class="fw-semibold d-block text-center">1st November, 2022</span>
-                                    </div>
-                                    <div class="buttons d-flex gap-2 justify-content-center">
-                                        <button class="card-btn"><i class="fa-brands fa-youtube"></i></button>
-                                        <button class="card-btn"><i class="fa-solid fa-message"></i></button>
+                                <div class="col-2 d-flex align-items-center">
+                                    <div class="container-mini d-flex flex-column justify-content-center align-items-center px-0 my-5 mx-3 rounded">
+                                        <div class="card-info pt-3 pb-3">
+                                            <h1 class="fw-bold fs-3 mb-0 text-center">9.45</h1>
+                                            <span class="fw-semibold d-block text-center">1st November, 2022</span>
+                                        </div>
+                                        <div class="buttons d-flex gap-2 justify-content-center">
+                                            <button class="card-btn"><i class="fa-brands fa-youtube"></i></button>
+                                            <button class="card-btn"><i class="fa-solid fa-message"></i></button>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- /MINIBADGE -->
@@ -401,14 +409,16 @@ export default {
                                 <!-- /GAME -->
 
                                 <!-- MINIBADGE -->
-                                <div class="col-2 d-flex flex-column justify-content-center align-items-center px-0 py-5 my-5 mx-3 rounded">
-                                    <div class="card-info pt-3 pb-3">
-                                        <h1 class="fw-bold fs-3 mb-0 text-center">9.45</h1>
-                                        <span class="fw-semibold d-block text-center">1st November, 2022</span>
-                                    </div>
-                                    <div class="buttons d-flex gap-2 justify-content-center">
-                                        <button class="card-btn"><i class="fa-brands fa-youtube"></i></button>
-                                        <button class="card-btn"><i class="fa-solid fa-message"></i></button>
+                                <div class="col-2 d-flex align-items-center">
+                                    <div class="container-mini d-flex flex-column justify-content-center align-items-center px-0 my-5 mx-3 rounded">
+                                        <div class="card-info pt-3 pb-3">
+                                            <h1 class="fw-bold fs-3 mb-0 text-center">9.45</h1>
+                                            <span class="fw-semibold d-block text-center">1st November, 2022</span>
+                                        </div>
+                                        <div class="buttons d-flex gap-2 justify-content-center">
+                                            <button class="card-btn"><i class="fa-brands fa-youtube"></i></button>
+                                            <button class="card-btn"><i class="fa-solid fa-message"></i></button>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- /MINIBADGE -->
@@ -458,8 +468,9 @@ export default {
     border-radius: 15px
 }
 
-.col-2 {
+.container-mini {
     background-color: $dark-purple;
+    padding: 20px;
 }
 
 // FILTERS
@@ -480,7 +491,7 @@ export default {
 .col:hover {
     background-color: $violet;
 }
-.col:hover .col-2  {
+.col:hover .container-mini  {
     background-color: $light-green;
 }
 .col:hover .card-btn  {
@@ -507,6 +518,9 @@ export default {
 // CARD IMG
 .card-img-top {
     background-color: $dark-purple;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
     padding: 20px;
     aspect-ratio: 1;
     img {
@@ -517,6 +531,8 @@ export default {
 // CARD TEXT
 .card-body {
     background-color: $light-violet;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     height: calc(20%);
     .card-sub-title {
         color: $green;
