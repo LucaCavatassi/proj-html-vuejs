@@ -16,7 +16,7 @@ export default {
 
 <template>
     <div class="container rounded">
-        <div class="row align-items-center justify-content-center py-4">
+        <div class="row align-items-center justify-content-center py-5">
             <div class="col ms_teams-icons mx-4" v-for="team in storeObj.teamsArray">
                 <img :src="getImagePath(team)" :alt="getImageName(team)">
             </div>
@@ -29,12 +29,17 @@ export default {
 
 .container {
     background-color: $purple;
+
+    .row {
+        margin: 0 auto;
+        text-align: center;
+    }
 }
 
 .ms_teams-icons {
     img {
         width: 80%;
-        height: 80%;
+        height: 150px;
         object-fit: contain;
     }
 }
