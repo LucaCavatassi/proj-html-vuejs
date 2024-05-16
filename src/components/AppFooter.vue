@@ -2,6 +2,8 @@
 import { store } from '../store';
 import { router } from '../router.js';
 import AppTeamsBanner from './AppTeamsBanner.vue'
+import AppSocialsLinks from './AppSocialsLinks.vue'
+
 
 
 export default {
@@ -15,6 +17,7 @@ export default {
     },
     components: {
         AppTeamsBanner,
+        AppSocialsLinks,
     }
 }
 </script>
@@ -38,20 +41,8 @@ export default {
                             <input type="text" placeholder="Enter Your Email" aria-label="Email">
                             <button>Subscribe</button>
                         </div>
-                        <div class="socials-icons">
-                            <span class="rounded-circle">
-                                <i class="fa-brands fa-facebook"></i>
-                            </span class="rounded-circle">
-                            <span class="rounded-circle">
-                                <i class="fa-brands fa-twitter"></i>
-                            </span class="rounded-circle">
-                            <span class="rounded-circle">
-                                <i class="fa-brands fa-instagram"></i>
-                            </span class="rounded-circle">
-                            <span class="rounded-circle">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </span class="rounded-circle">
-                        </div>
+
+                        <AppSocialsLinks />
                     </div>
                     <!-- /Box footer -->
 
@@ -172,16 +163,6 @@ footer {
             button {
                 border: 0;
                 padding: .7em;
-            }
-        }
-
-        .socials-icons {
-
-            span {
-                background-color: $violet;
-                padding: .8em;
-                margin-right: .5em;
-
             }
         }
 
