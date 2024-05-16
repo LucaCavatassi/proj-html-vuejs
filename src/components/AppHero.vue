@@ -11,19 +11,31 @@ export default {
     methods:{
         getStore(){
             console.log(this.page);
+        },
+        getPageTitle() {
+            return this.page.menu[this.page.activeIndex || 0].title;
+        },
+    },
+    mounted() {
+        const storedIndex = parseInt(localStorage.getItem('currentIndex')) || 0;
+
+        if (storedIndex >= 0 && storedIndex < this.page.menu.length) {
+            this.page.activeIndex = storedIndex;
+        } else {
+            this.page.activeIndex = 0;
         }
-    }
+    },
 }
 </script>
 
 <template>
     <div class="ms-hero text-white container-fluid">
         <section class="position-relative z-index-1">
-            <!-- <h1 class="fw-semibold">{{ this.page.menu[this.page.activeIndex].title }}</h1> -->
+            <h1 class="fw-semibold">{{ getPageTitle() }}</h1>
             <span>
                 <span>Home</span>
                 <i class="fa-solid fa-arrow-right-long ms-color-light-green mx-1"></i>
-                <!-- <span>{{ this.page.menu[this.page.activeIndex].title }}</span> -->
+                <span>{{ getPageTitle() }}</span>
             </span>
         </section>
     </div>

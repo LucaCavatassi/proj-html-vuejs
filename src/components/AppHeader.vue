@@ -24,6 +24,7 @@ export default {
         },
         saveIndex(index) {
             this.store.activeIndex = index;
+            localStorage.setItem('currentIndex', this.store.activeIndex);
         },
     },
     beforeDestroy() {
@@ -86,7 +87,7 @@ export default {
                         Live streaming
                     </a>
                 </div>
-            </div>
+            </div> 
         </div>
         <!-- lower header -->
         <header class="ms-bg-dark-purple d-flex" :class="{ 'fixed-top': isFixed }"
