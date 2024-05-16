@@ -2,6 +2,10 @@
 import PlayButtonSmall from "./PlayButtonSmall.vue"
 
 export default {
+    props: {
+        title: "String",
+        subTitle: "String",
+    },
     components: {
         PlayButtonSmall, 
     },
@@ -84,8 +88,8 @@ export default {
 
                         <!-- TEXT -->
                         <div class=" w-50 ms-mg">
-                            <h5 class="ms-green">Upcoming Match</h5>
-                            <span class="ms-fs fw-bold text-white">Keep Eyes & Manage upcoming Battle</span>
+                            <h5 class="ms-green">{{ subTitle }}</h5>
+                            <span class="ms-fs fw-bold text-white">{{ title }}</span>
                         </div>
                         <!-- TEXT -->
 

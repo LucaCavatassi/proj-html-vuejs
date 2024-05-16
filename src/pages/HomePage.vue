@@ -7,6 +7,7 @@ import UpcomingMatchPage from "../components/UpcomingMatchPage.vue"
 
 
 export default {
+
     components: {
         Hero,
         GamesCarouselPage, 
@@ -23,10 +24,10 @@ export default {
 
 <template>
     <Hero />
-    <GamesCarouselPage />
-    <UpcomingMatchPage />
-    <BattleCarouselPage />
-    <ShopCarouselPage />
+    <GamesCarouselPage title="Choose Who's The Best In The World!" subTitle="Trending Games" />
+    <UpcomingMatchPage title="Upcoming Match" subTitle="Trending Battle"/>
+    <BattleCarouselPage title="Keep Eyes & Manage upcoming Battle" subTitle="Upcoming Match" />
+    <ShopCarouselPage title="Explore Our Shop" subTitle="Gamer Shop" />
 </template>
 
 <style scoped lang="scss">

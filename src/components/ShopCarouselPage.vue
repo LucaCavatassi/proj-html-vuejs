@@ -1,5 +1,9 @@
 <script>
 export default {
+    props: {
+        title: "String",
+        subTitle: "String",
+    },
     data (){
         return{
             activeIndex: 0,
@@ -87,8 +91,8 @@ export default {
 
                         <!-- TEXT -->
                         <div class="w-50 ms-mg">
-                            <h5 class="ms-green">Gamer Shop</h5>
-                            <span class="ms-fs fw-bold text-white">Explore Our Shop</span>
+                            <h5 class="ms-green">{{ subTitle }}</h5>
+                            <span class="ms-fs fw-bold text-white">{{ title }}</span>
                         </div>
                         <!-- TEXT -->
 

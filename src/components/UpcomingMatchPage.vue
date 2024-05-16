@@ -1,5 +1,9 @@
 <script>
 export default {
+    props: {
+        title: "String",
+        subTitle: "String",
+    },
     data() {
         return{
 
@@ -101,8 +105,8 @@ export default {
             <div class="container py-5">
                 <div class="row flex-column">
                     <div class="text-center"> 
-                        <span class="msgreen">Trending Battle</span>
-                        <h1 class="text-white">Upcoming Match</h1>
+                        <span class="msgreen">{{ subTitle }}</span>
+                        <h1 class="text-white">{{ title }}</h1>
                     </div>
                     <div class="filter-buttons p-3 d-flex justify-content-center gap-2">
                         <button @click="showAll" :class="{ msgreen: isAll}">ALL</button>
