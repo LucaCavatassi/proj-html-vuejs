@@ -1,37 +1,37 @@
 # Midterm Project - README
 
-## Descrizione del Progetto
+## Project Description
 
-Questo progetto di midterm consiste nella replica di alcune pagine del sito **RaxG** [NextGenerationDev](https://nextgenerationdev.com/demos/html/raxg/raxg/index-3.html). Le pagine replicate sono:
+This midterm project consists of replicating some pages of the **RaxG** website [NextGenerationDev](https://nextgenerationdev.com/demos/html/raxg/raxg/index-3.html). The replicated pages are:
 
 - Home
 - About Us
 - Contact
 
-Il progetto è stato sviluppato utilizzando Vite come build tool e le seguenti dipendenze:
+The project was developed using Vite as the build tool and the following dependencies:
 
-- **Vue**: per la costruzione dell'interfaccia utente.
-- **Sass**: per la gestione degli stili CSS in modo più efficiente e modulare.
-- **Bootstrap**: per un design reattivo e componenti pre-stilizzati.
-- **FontAwesome**: per l'integrazione di icone vettoriali scalabili.
+- **Vue**: for building the user interface.
+- **Sass**: for more efficient and modular CSS styling.
+- **Bootstrap**: for responsive design and pre-styled components.
+- **FontAwesome**: for the integration of scalable vector icons.
 
-## Caratteristiche Tecniche
+## Technical Features
 
-- **Props**: Utilizzo delle props per passare dati ai componenti figli in modo dinamico.
-- **Store**: Gestione dello stato globale dell'applicazione con Vuex.
-- **Components**: Scomposizione dell'interfaccia utente in componenti riutilizzabili.
-- **Multi-Page**: Implementazione di un'applicazione multi-pagina.
-- **Routing**: Navigazione tra le diverse pagine tramite Vue Router.
+- **Props**: Use of props to dynamically pass data to child components.
+- **Store**: Management of the application's global state with Vuex.
+- **Components**: Breakdown of the user interface into reusable components.
+- **Multi-Page**: Implementation of a multi-page application.
+- **Routing**: Navigation between different pages through Vue Router.
 
-## Autori
+## Authors
 
-Il progetto è stato realizzato da:
+The project was created by:
 
 - Luca Maria Cavatassi
 - Denis Turbato
 - Andrea Bertaglia
 
-## Screenshot delle Pagine
+## Page Screenshots
 
 ### Home
 
@@ -47,4 +47,4 @@ Il progetto è stato realizzato da:
 
 ---
 
-Questo README offre una panoramica del progetto, le tecnologie utilizzate e gli autori che hanno contribuito alla realizzazione del midterm. Speriamo che il nostro lavoro soddisfi le aspettative e dimostri le competenze acquisite durante il corso.
+This README provides an overview of the project, the technologies used, and the authors who contributed to the development of the midterm project. We hope our work meets expectations and demonstrates the skills acquired during the course.
